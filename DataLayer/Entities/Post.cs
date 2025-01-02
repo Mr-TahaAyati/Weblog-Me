@@ -9,10 +9,8 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Entities
 {
-  public class Post
+    public class Post:BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         public int UserId { get; set; }
         [Required]
         public string Description { get; set; }
@@ -20,11 +18,14 @@ namespace DataLayer.Entities
         public string Title { get; set; }
         [Required]
         public string Slug { get; set; }
+        #region Relations
+        public bool IsDelete { get; set; }
 
         [ForeignKey("UserId")]
         public User User { get; set; }
 
         public ICollection<PostComment> PostComments { get; set; }
+        #endregion
 
     }
 }
