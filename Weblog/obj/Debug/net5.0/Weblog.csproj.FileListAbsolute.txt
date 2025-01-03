@@ -81,3 +81,6 @@ C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\bin\Debug\net5.0\CoreLayer.pdb
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\bin\Debug\net5.0\DataLayer.pdb
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Weblog.csproj.AssemblyReference.cache
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Weblog.sourcelink.json
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Auth\Login.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Auth\Register.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Shared\_AuthLayout.cshtml.g.cs

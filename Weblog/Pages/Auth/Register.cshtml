@@ -1,0 +1,36 @@
+﻿ @page
+@model Weblog.Pages.Shared.Auth.LoginModel
+@{
+    Layout = "Shared/_AuthLayout";
+    ViewData["Title"] = "SingUp";
+}
+<div class="form login">
+    <div class="form-content">
+        <header>SingUp</header>
+        <form action="#">
+            <div class="field input-field">
+                <input type="text" placeholder="FullName" class="input">
+            </div>
+            <div class="field input-field">
+                <input type="username" placeholder="UserName" class="input">
+            </div>
+
+            <div class="field input-field">
+                <input type="password" placeholder="Password" class="password">
+                <i class='bx bx-hide eye-icon'></i>
+            </div>
+
+            <div class="form-link">
+                <a href="#" class="forgot-pass">Forgot password?</a>
+            </div>
+
+            <div class="field button-field">
+                <button>Login</button>
+            </div>
+        </form>
+
+        <div class="form-link">
+            <span>you have an account? <a asp-page="Login">Login</a></span>
+        </div>
+    </div>
+</div>
