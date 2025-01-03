@@ -47,8 +47,11 @@
     <section class="container forms">
         @RenderBody()
     </section>
- 
-    <!-- JavaScript -->
+    <script src="/js/jquery.min.js"></script>
     <script src="/AuthLayout/js/script.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+    @await RenderSectionAsync("Scripts", false)
+    <!-- JavaScript -->
+
 </body>
 </html>

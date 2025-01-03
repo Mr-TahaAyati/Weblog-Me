@@ -10,3 +10,7 @@ C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Debug\net5.0\CoreLayer.d
 C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Debug\net5.0\refint\CoreLayer.dll
 C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Debug\net5.0\CoreLayer.pdb
 C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Debug\net5.0\ref\CoreLayer.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\bin\Debug\net5.0\DataLayer.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\bin\Debug\net5.0\DataLayer.pdb
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Debug\net5.0\CoreLayer.csproj.AssemblyReference.cache
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Debug\net5.0\CoreLayer.csproj.Up2Date

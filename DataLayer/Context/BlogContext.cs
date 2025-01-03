@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Context
 {
-    public class BlogContext:DbContext
+    public class BlogContext : DbContext
     {
         public BlogContext(DbContextOptions<BlogContext> options) : base(options)
         {
 
         }
-        public DbSet<Post> Posts { get; set; }
+
         public DbSet<PostComment> PostComments { get; set; }
+        public DbSet<Post> Posts { get; set; }
         public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

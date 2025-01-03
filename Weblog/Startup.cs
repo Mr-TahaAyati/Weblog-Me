@@ -1,3 +1,4 @@
+using CoreLayer.Services.Users;
 using DataLayer.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,7 @@ namespace Weblog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddScoped<IUserService, UserService>();
             services.AddDbContext<BlogContext>(option =>
             {
                 option.UseSqlServer(Configuration.GetConnectionString("Default"));
