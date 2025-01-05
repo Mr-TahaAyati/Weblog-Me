@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Weblog.Pages.Auth
 {
+    [ValidateAntiForgeryToken]
     [BindProperties]
     public class RegisterModel : PageModel
     {

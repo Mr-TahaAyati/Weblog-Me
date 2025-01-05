@@ -1,4 +1,5 @@
 ﻿using CoreLayer.DTOs.User;
+using CoreLayer.DTOs.Users;
 using CoreLayer.Utilities;
 using DataLayer.Entities;
 using System;
@@ -12,5 +13,6 @@ namespace CoreLayer.Services.Users
     public interface IUserService
     {
         OperationResult RegisterUser(UserRegisterDto registerDto);
+        OperationResult UserLogin(UserLoginDto loginDto);
     }
 }

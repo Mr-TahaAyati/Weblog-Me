@@ -1,4 +1,5 @@
 ﻿using CoreLayer.DTOs.User;
+using CoreLayer.DTOs.Users;
 using CoreLayer.Utilities;
 using DataLayer.Context;
 using DataLayer.Entities;
@@ -37,6 +38,17 @@ namespace CoreLayer.Services.Users
             });
             _context.SaveChanges();
             return OperationResult.Success();
+        }
+        public OperationResult UserLogin(UserLoginDto loginDto)
+        {
+            var passwordHashed = loginDto.Password.EncodeToMd5();
+            var isUserExits = _context.Users.Any(u => u.UserName == loginDto.UserName && u.Password == passwordHashed );
+            if (isUserExits == false)
+                return OperationResult.NotFound();
+
+            return OperationResult.Success();
+
+            
         }
     }
 }
