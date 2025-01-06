@@ -1,9 +1,14 @@
 ﻿using CoreLayer.DTOs.Users;
 using CoreLayer.Services.Users;
 using CoreLayer.Utilities;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
+using System.Security.Principal;
 
 namespace Weblog.Pages.Shared.Auth
 {
@@ -34,17 +39,31 @@ namespace Weblog.Pages.Shared.Auth
             {
                 return Page();
             }
-            var result = _userService.UserLogin(new UserLoginDto()
+            var user = _userService.UserLogin(new UserLoginDto()
             {
                 Password = Password,
                 UserName = UserName
             });
-            if (result.Status == OperationResultStatus.NotFound)
+            if (user==null)
             {
                 ModelState.AddModelError("UserName", "حساب مورد نظر پیدا نشد");
                 return Page();
             }
-            return RedirectToPage("../Index");
+            List<Claim> claims = new List<Claim>()
+            {
+                new Claim("Test","Test"),
+                new Claim(ClaimTypes.NameIdentifier,user.UserId.ToString()),
+                new Claim(ClaimTypes.Name,user.FullName)
+            };
+            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var claimPrincipal = new ClaimsPrincipal(identity);
+            var properties = new AuthenticationProperties()
+            {
+                IsPersistent = true,
+
+            };
+            HttpContext.SignInAsync(claimPrincipal,properties);
+            return RedirectToPage("../Index");       
         }
     }
 }
