@@ -10,21 +10,17 @@
         <form method="post">
             <div class="field input-field">
                 <input type="text" asp-for="FullName" placeholder="FullName" class="input">
-                <span asp-validation-for="FullName" style="color: red"></span>
+                <span asp-validation-for="FullName" class="error-message" style="color: red"></span>
             </div>
             <div class="field input-field">
                 <input type="username" asp-for="UserName" placeholder="UserName" class="input">
-                <span asp-validation-for="UserName" style="color: red"></span>
+                <span asp-validation-for="UserName" class="error-message" style="color: red"></span>
             </div>
             <div class="field input-field">
                 <input type="password" asp-for="Password" placeholder="Password" class="password">
-                <span asp-validation-for="Password" style="color: red"></span>
+                <span asp-validation-for="Password" class="error-message" style="color: red"></span>
                 <i class='bx bx-hide eye-icon'></i>
             </div>
-            <div class="form-link">
-                <a href="#" class="forgot-pass">Forgot password?</a>
-            </div>
-
             <div class="field button-field">
                 <button>SingUp</button>
             </div>
