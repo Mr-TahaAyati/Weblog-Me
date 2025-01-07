@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +27,9 @@ namespace Weblog
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        { 
             services.AddRazorPages();
+            services.AddControllersWithViews();
             services.AddScoped<IUserService, UserService>();
             services.AddDbContext<BlogContext>(option =>
             {
@@ -43,7 +45,7 @@ namespace Weblog
             {
                 option.LoginPath = "/Auth/Login";
 
-                option.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                option.ExpireTimeSpan = TimeSpan.FromDays(30);
             });
             
         }
@@ -72,6 +74,10 @@ namespace Weblog
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "Default",
+                    pattern:"{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                   );
                 endpoints.MapRazorPages();
             });
         }

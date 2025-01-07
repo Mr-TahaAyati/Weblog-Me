@@ -26,7 +26,6 @@ C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Sh
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Shared\_Nav.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
-C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Weblog.RazorTargetAssemblyInfo.cache
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Weblog.RazorTargetAssemblyInfo.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Weblog.Views.pdb
@@ -84,3 +83,10 @@ C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Weblog.sourcel
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Auth\Login.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Auth\Register.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Shared\_AuthLayout.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\_ViewImports.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Areas\UserPanel\Pages\Index.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Areas\UserPanel\Pages\_ViewImports.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\_ViewStart.cshtml.g.cs
