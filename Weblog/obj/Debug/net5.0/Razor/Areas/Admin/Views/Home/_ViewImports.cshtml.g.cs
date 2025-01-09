@@ -21,6 +21,7 @@ namespace Weblog.Pages
 #nullable disable
     ;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"cae6d25ef905f3c95b811b4486fc2b74b081621d7c9571bc2c4e1eb8fcb5ac77", @"/Areas/Admin/Views/Home/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"cae6d25ef905f3c95b811b4486fc2b74b081621d7c9571bc2c4e1eb8fcb5ac77", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Admin_Views_Home__ViewImports : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
