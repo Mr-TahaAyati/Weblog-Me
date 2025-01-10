@@ -25,6 +25,7 @@ namespace DataLayer.Entities
         public User User { get; set; }
 
         public ICollection<PostComment> PostComments { get; set; }
+        public string ImageName { get; set; }
         #endregion
 
     }

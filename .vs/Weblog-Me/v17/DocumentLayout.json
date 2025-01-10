@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\corelayer\\services\\posts\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|solutionrelative:corelayer\\services\\posts\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\corelayer\\mappers\\postmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|solutionrelative:corelayer\\mappers\\postmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\corelayer\\dtos\\posts\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|solutionrelative:corelayer\\dtos\\posts\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\corelayer\\dtos\\posts\\createpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|solutionrelative:corelayer\\dtos\\posts\\createpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\corelayer\\dtos\\posts\\editpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|solutionrelative:corelayer\\dtos\\posts\\editpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA31C208-187E-48C4-915F-4EFB77612C40}|DataLayer\\DataLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\datalayer\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA31C208-187E-48C4-915F-4EFB77612C40}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\corelayer\\corelayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|solutionrelative:corelayer\\corelayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|solutionrelative:weblog\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -41,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\pages\\shared\\_nav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|solutionrelative:weblog\\pages\\shared\\_nav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA31C208-187E-48C4-915F-4EFB77612C40}|DataLayer\\DataLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\datalayer\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA31C208-187E-48C4-915F-4EFB77612C40}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA31C208-187E-48C4-915F-4EFB77612C40}|DataLayer\\DataLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\datalayer\\entities\\postcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -143,10 +167,6 @@
       "RelativeMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|solutionrelative:corelayer\\utilities\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\corelayer\\corelayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AD31C7C0-8870-4D86-B6F9-978683A059F5}|CoreLayer\\CoreLayer.csproj|solutionrelative:corelayer\\corelayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA31C208-187E-48C4-915F-4EFB77612C40}|DataLayer\\DataLayer.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\datalayer\\datalayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{DA31C208-187E-48C4-915F-4EFB77612C40}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\datalayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -162,7 +182,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -170,31 +190,109 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Weblog\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Weblog\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-30T15:56:47.529Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Entities\\User.cs",
-              "RelativeToolTip": "DataLayer\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PostMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\Mappers\\PostMapper.cs",
+              "RelativeDocumentMoniker": "CoreLayer\\Mappers\\PostMapper.cs",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\Mappers\\PostMapper.cs",
+              "RelativeToolTip": "CoreLayer\\Mappers\\PostMapper.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwCoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T16:18:54.325Z"
+              "WhenOpened": "2025-01-10T09:54:29.009Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 4,
+              "Title": "EditPostDto.cs",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\DTOs\\Posts\\EditPostDto.cs",
+              "RelativeDocumentMoniker": "CoreLayer\\DTOs\\Posts\\EditPostDto.cs",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\DTOs\\Posts\\EditPostDto.cs",
+              "RelativeToolTip": "CoreLayer\\DTOs\\Posts\\EditPostDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:50:54.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PostDto.cs",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\DTOs\\Posts\\PostDto.cs",
+              "RelativeDocumentMoniker": "CoreLayer\\DTOs\\Posts\\PostDto.cs",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\DTOs\\Posts\\PostDto.cs",
+              "RelativeToolTip": "CoreLayer\\DTOs\\Posts\\PostDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:50:05.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreatePostDto.cs",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\DTOs\\Posts\\CreatePostDto.cs",
+              "RelativeDocumentMoniker": "CoreLayer\\DTOs\\Posts\\CreatePostDto.cs",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\DTOs\\Posts\\CreatePostDto.cs",
+              "RelativeToolTip": "CoreLayer\\DTOs\\Posts\\CreatePostDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:42:28.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IPostService.cs",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\Services\\Posts\\IPostService.cs",
+              "RelativeDocumentMoniker": "CoreLayer\\Services\\Posts\\IPostService.cs",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\Services\\Posts\\IPostService.cs",
+              "RelativeToolTip": "CoreLayer\\Services\\Posts\\IPostService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAADwvzkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:34:09.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAMgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T17:48:00.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T17:33:13.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Entities\\Post.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Entities\\Post.cs",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Entities\\Post.cs",
+              "RelativeToolTip": "DataLayer\\Entities\\Post.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-01T16:11:01.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\Services\\Users\\IUserService.cs",
               "RelativeDocumentMoniker": "CoreLayer\\Services\\Users\\IUserService.cs",
@@ -206,33 +304,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAAAMgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T17:48:00.599Z",
+              "DocumentIndex": 6,
+              "Title": "CoreLayer.csproj",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\CoreLayer.csproj",
+              "RelativeDocumentMoniker": "CoreLayer\\CoreLayer.csproj",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\CoreLayer.csproj",
+              "RelativeToolTip": "CoreLayer\\CoreLayer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-01T16:05:55.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T17:33:13.82Z",
-              "EditorCaption": ""
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Entities\\User.cs",
+              "RelativeToolTip": "DataLayer\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-01T16:18:54.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\_ViewStart.cshtml",
@@ -240,12 +337,23 @@
               "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T17:48:09.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T17:48:09.002Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 13,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Weblog\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Weblog\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T15:56:47.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "_SideBar.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_SideBar.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\Shared\\_SideBar.cshtml",
@@ -258,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "_Header.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
@@ -266,12 +374,11 @@
               "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
               "ViewState": "AgIAAOQAAAAAAAAAAAAAAOgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-09T12:26:39.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T12:26:39.193Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Pages\\Index.cshtml",
@@ -279,12 +386,11 @@
               "RelativeToolTip": "Weblog\\Pages\\Index.cshtml",
               "ViewState": "AgIAAGIBAAAAAAAAAAAAAGIBAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-30T16:15:30.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T16:15:30.064Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "_AuthLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Shared\\_AuthLayout.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Pages\\Shared\\_AuthLayout.cshtml",
@@ -296,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "_Nav.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Shared\\_Nav.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Pages\\Shared\\_Nav.cshtml",
@@ -308,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "_Footer.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Shared\\_Footer.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Pages\\Shared\\_Footer.cshtml",
@@ -320,19 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Post.cs",
-              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Entities\\Post.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Entities\\Post.cs",
-              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Entities\\Post.cs",
-              "RelativeToolTip": "DataLayer\\Entities\\Post.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T16:11:01.707Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "PostComment.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Entities\\PostComment.cs",
               "RelativeDocumentMoniker": "DataLayer\\Entities\\PostComment.cs",
@@ -344,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\Services\\Users\\UserService.cs",
               "RelativeDocumentMoniker": "CoreLayer\\Services\\Users\\UserService.cs",
@@ -356,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "BlogContext.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Context\\BlogContext.cs",
               "RelativeDocumentMoniker": "DataLayer\\Context\\BlogContext.cs",
@@ -368,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Auth\\Login.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Pages\\Auth\\Login.cshtml",
@@ -380,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Startup.cs",
               "RelativeDocumentMoniker": "Weblog\\Startup.cs",
@@ -392,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Auth\\Register.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Pages\\Auth\\Register.cshtml",
@@ -404,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Auth\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "Weblog\\Pages\\Auth\\Login.cshtml.cs",
@@ -416,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Contrlolers\\HomeController.cs",
               "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Contrlolers\\HomeController.cs",
@@ -428,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\UserPanel\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Areas\\UserPanel\\Pages\\Index.cshtml",
@@ -440,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\wwwroot\\AuthLayout\\css\\style.css",
               "RelativeDocumentMoniker": "Weblog\\wwwroot\\AuthLayout\\css\\style.css",
@@ -452,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Auth\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "Weblog\\Pages\\Auth\\Register.cshtml.cs",
@@ -464,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "font-awesome.min.css",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\wwwroot\\css\\font-awesome.min.css",
               "RelativeDocumentMoniker": "Weblog\\wwwroot\\css\\font-awesome.min.css",
@@ -476,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\DTOs\\Users\\UserDto.cs",
               "RelativeDocumentMoniker": "CoreLayer\\DTOs\\Users\\UserDto.cs",
@@ -488,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Weblog\\Pages\\Index.cshtml.cs",
@@ -500,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 36,
               "Title": "20250102164801_init_database.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Migrations\\20250102164801_init_database.cs",
               "RelativeDocumentMoniker": "DataLayer\\Migrations\\20250102164801_init_database.cs",
@@ -512,7 +606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "UserLoginDto.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\DTOs\\Users\\UserLoginDto.cs",
               "RelativeDocumentMoniker": "CoreLayer\\DTOs\\Users\\UserLoginDto.cs",
@@ -524,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 37,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Entities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "DataLayer\\Entities\\BaseEntity.cs",
@@ -536,7 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "20250103215701_AddIsDelete.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Migrations\\20250103215701_AddIsDelete.cs",
               "RelativeDocumentMoniker": "DataLayer\\Migrations\\20250103215701_AddIsDelete.cs",
@@ -548,7 +642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "20250102170249_create_baseentity.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\Migrations\\20250102170249_create_baseentity.cs",
               "RelativeDocumentMoniker": "DataLayer\\Migrations\\20250102170249_create_baseentity.cs",
@@ -560,7 +654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 38,
               "Title": "Encoder.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\Utilities\\Encoder.cs",
               "RelativeDocumentMoniker": "CoreLayer\\Utilities\\Encoder.cs",
@@ -572,7 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 39,
               "Title": "UserRegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\DTOs\\Users\\UserRegisterDto.cs",
               "RelativeDocumentMoniker": "CoreLayer\\DTOs\\Users\\UserRegisterDto.cs",
@@ -584,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 40,
               "Title": "OperationResult.cs",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\Utilities\\OperationResult.cs",
               "RelativeDocumentMoniker": "CoreLayer\\Utilities\\OperationResult.cs",
@@ -596,19 +690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "CoreLayer.csproj",
-              "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\CoreLayer.csproj",
-              "RelativeDocumentMoniker": "CoreLayer\\CoreLayer.csproj",
-              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\CoreLayer\\CoreLayer.csproj",
-              "RelativeToolTip": "CoreLayer\\CoreLayer.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-01T16:05:55.965Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\appsettings.json",
               "RelativeDocumentMoniker": "Weblog\\appsettings.json",
@@ -620,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "DataLayer.csproj",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\DataLayer\\DataLayer.csproj",
               "RelativeDocumentMoniker": "DataLayer\\DataLayer.csproj",

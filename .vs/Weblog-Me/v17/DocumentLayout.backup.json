@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|solutionrelative:weblog\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|solutionrelative:weblog\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|solutionrelative:weblog\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\areas\\admin\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|solutionrelative:weblog\\areas\\admin\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|solutionrelative:weblog\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|solutionrelative:weblog\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|solutionrelative:weblog\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|solutionrelative:weblog\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBCE57C7-9528-4751-814A-4862A84D10F0}|Weblog\\Weblog.csproj|c:\\users\\soleimani\\source\\repos\\weblog-me\\weblog\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -162,7 +162,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -206,13 +206,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml*",
-              "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAXAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAMgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-07T17:48:00.599Z",
               "EditorCaption": ""
@@ -225,14 +225,14 @@
               "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACkAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-07T17:33:13.82Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\_ViewStart.cshtml",
@@ -245,26 +245,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "_SideBar.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_SideBar.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\Shared\\_SideBar.cshtml",
               "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_SideBar.cshtml",
               "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\Shared\\_SideBar.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-09T12:28:38.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "_Header.cshtml",
               "DocumentMoniker": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
               "RelativeDocumentMoniker": "Weblog\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
               "ToolTip": "C:\\Users\\Soleimani\\source\\repos\\Weblog-Me\\Weblog\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
               "RelativeToolTip": "Weblog\\Areas\\Admin\\Views\\Shared\\_Header.cshtml",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAAAOgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-09T12:26:39.193Z",
               "EditorCaption": ""
