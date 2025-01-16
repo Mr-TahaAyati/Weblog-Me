@@ -1,3 +1,4 @@
+using CoreLayer.Services.Posts;
 using CoreLayer.Services.Users;
 using DataLayer.Context;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -31,6 +32,7 @@ namespace Weblog
             services.AddRazorPages();
             services.AddControllersWithViews();
             services.AddScoped<IUserService, UserService>();
+            services.AddTransient<IPostService, PostService>();
             services.AddDbContext<BlogContext>(option =>
             {
                 option.UseSqlServer(Configuration.GetConnectionString("Default"));

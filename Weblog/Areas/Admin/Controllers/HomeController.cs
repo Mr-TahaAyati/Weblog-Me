@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Weblog.Areas.Admin.Contrlolers
+namespace Weblog.Areas.Admin.Controllers    
 {
     [Area("admin")]
     public class HomeController : Controller

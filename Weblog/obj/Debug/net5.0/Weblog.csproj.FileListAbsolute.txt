@@ -93,3 +93,6 @@ C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\_ViewSta
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Header.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_SideBar.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Blog.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Pages\Shared\_LayoutBlog.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Debug\net5.0\Razor\Areas\Admin\Views\Post\Index.cshtml.g.cs
