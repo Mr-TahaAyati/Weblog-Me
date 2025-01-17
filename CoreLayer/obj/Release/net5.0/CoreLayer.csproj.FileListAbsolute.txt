@@ -1,0 +1,16 @@
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\bin\Release\net5.0\CoreLayer.deps.json
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\bin\Release\net5.0\CoreLayer.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\bin\Release\net5.0\CoreLayer.pdb
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\bin\Release\net5.0\DataLayer.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\bin\Release\net5.0\DataLayer.pdb
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\CoreLayer.csproj.AssemblyReference.cache
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\CoreLayer.AssemblyInfoInputs.cache
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\CoreLayer.AssemblyInfo.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\CoreLayer.csproj.CoreCompileInputs.cache
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\CoreLayer.sourcelink.json
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\CoreLayer.csproj.Up2Date
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\CoreLayer.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\refint\CoreLayer.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\CoreLayer.pdb
+C:\Users\Soleimani\source\repos\Weblog-Me\CoreLayer\obj\Release\net5.0\ref\CoreLayer.dll

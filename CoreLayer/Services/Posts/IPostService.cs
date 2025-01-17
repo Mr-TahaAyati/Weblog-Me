@@ -11,51 +11,69 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace CoreLayer.Services.Posts
 {
-    public interface IPostService
-    {
-        OperationResult CreatePost(CreatePostDto command);
-        OperationResult EditPost(EditPostDto command);
+	public interface IPostService
+	{
+		OperationResult CreatePost(CreatePostDto command);
+		OperationResult EditPost(EditPostDto command);
+		PostDto GetPostBuyId(int postid);
+		bool IsSlugExist(string slug);
 
-        PostDto GetPostBuyId(int postid);
-        bool IsSlugExist(string slug); 
-    }
-    public class PostService : IPostService
-    {
-       private readonly BlogContext _context;
+		// افزودن متد جدید
+		IEnumerable<PostDto> GetAllPosts(); // متد برای دریافت تمام پست‌ها
+	}
 
-        public PostService(BlogContext context)
-        {
-            _context = context;
-        }
-        public OperationResult CreatePost(CreatePostDto command)
-        {
-            var Post = PostMapper.MapCreateDtoToPost(command);
-            _context.Posts.Add(Post);
-            _context.SaveChanges();
-            return OperationResult.Success();
-        }
+	public class PostService : IPostService
+	{
+		private readonly BlogContext _context;
 
-        public OperationResult EditPost(EditPostDto command)
-        {
-         var post = _context.Posts.FirstOrDefault(c=>c.Id==command.PostId);
-            if (post == null)
-                return OperationResult.NotFound();
+		public PostService(BlogContext context)
+		{
+			_context = context;
+		}
 
-            post=PostMapper.MapEditDtoToPost(command, post);
-            _context.Posts.Update(post);
-            _context.SaveChanges();
-            return OperationResult.Success();
-        }
+		public IEnumerable<PostDto> GetAllPosts()
+		{
+			return _context.Posts
+				.Select(post => new PostDto
+				{
+					PostId = post.PostId,
+					Title = post.Title,
+					Slug = post.Slug,
+					ImageName = post.ImageName
+				})
+				.ToList(); // به صورت یک لیست از PostDto باز می‌گرداند
+		}
 
-        public PostDto GetPostBuyId(int postId)
-        {
-            var post = _context.Posts.FirstOrDefault(c => c.Id == postId);
-            return PostMapper.MapToDto(post);
-        }
+		public OperationResult CreatePost(CreatePostDto command)
+		{
+			var Post = PostMapper.MapCreateDtoToPost(command);
+			_context.Posts.Add(Post);
+			_context.SaveChanges();
+			return OperationResult.Success();
+		}
 
-        public bool IsSlugExist(string slug)
-        {
-            return _context.Posts.Any(p => p.Slug == slug);
-        }
-    }
+		public OperationResult EditPost(EditPostDto command)
+		{
+			var post = _context.Posts.FirstOrDefault(c => c.Id == command.PostId);
+			if (post == null)
+				return OperationResult.NotFound();
+
+			post = PostMapper.MapEditDtoToPost(command, post);
+			_context.Posts.Update(post);
+			_context.SaveChanges();
+			return OperationResult.Success();
+		}
+
+		public PostDto GetPostBuyId(int postId)
+		{
+			var post = _context.Posts.FirstOrDefault(c => c.Id == postId);
+			return PostMapper.MapToDto(post);
+		}
+
+		public bool IsSlugExist(string slug)
+		{
+			return _context.Posts.Any(p => p.Slug == slug);
+		}
+	}
+
 }

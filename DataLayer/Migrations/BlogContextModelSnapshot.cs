@@ -33,8 +33,14 @@ namespace DataLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
+
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Slug")
                         .IsRequired()

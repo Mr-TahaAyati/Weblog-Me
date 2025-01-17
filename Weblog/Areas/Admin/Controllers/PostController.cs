@@ -3,19 +3,22 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Weblog.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class PostController : Controller
-    {
-      private readonly IPostService _postService;
+	[Area("Admin")]
+	public class PostController : Controller
+	{
+		private readonly IPostService _PostService;
 
-        public PostController(IPostService postService)
-        {
-            _postService = postService;
-        }
-        public IActionResult Index()
-        {
-            var model = _postService;
-            return View(model);
-        }
-    }
+		public PostController(IPostService postService)
+		{
+			_PostService = postService;
+		}
+
+		public IActionResult Index()
+		{
+			var posts = _PostService.GetAllPosts(); // دریافت پست‌ها
+			return View(posts); // ارسال به ویو
+		}
+
+	}
+
 }

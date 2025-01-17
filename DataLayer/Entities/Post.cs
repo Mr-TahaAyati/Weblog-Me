@@ -11,6 +11,7 @@ namespace DataLayer.Entities
 {
     public class Post:BaseEntity
     {
+        public int PostId { get; set; }
         public int UserId { get; set; }
         [Required]
         public string Description { get; set; }
