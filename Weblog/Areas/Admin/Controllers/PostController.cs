@@ -18,7 +18,16 @@ namespace Weblog.Areas.Admin.Controllers
 			var posts = _PostService.GetAllPosts(); // دریافت پست‌ها
 			return View(posts); // ارسال به ویو
 		}
-
-	}
+		public IActionResult Add()
+		{
+			return View();
+		}
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+        public IActionResult Add(string i)
+        {
+            return View();
+        }
+    }
 
 }

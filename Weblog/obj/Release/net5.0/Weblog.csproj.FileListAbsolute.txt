@@ -96,3 +96,9 @@ C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\staticwebass
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Weblog.csproj.Up2Date
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Weblog.genruntimeconfig.cache
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\ref\Weblog.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\bin\Release\net5.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\bin\Release\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\bin\Release\net5.0\System.IO.Pipelines.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Post\Add.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Shared\EditorTemplates\Ckeditor4.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Shared\EditorTemplates\IFormFile.cshtml.g.cs
