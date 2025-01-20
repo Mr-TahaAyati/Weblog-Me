@@ -1,5 +1,6 @@
 ﻿@using Weblog.Areas.Admin.Models.Posts
 @model CreatePostViewModel
+
 <section class="content-header" style="margin-bottom: 20px;">
     <h1>
         @ViewData["Title"]
@@ -20,29 +21,47 @@
 </section>
 
 <section class="content">
-    <form class="box box-danger" method="post" enctype="multipart/form-data" asp-area="Admin" asp-controller="">
+    <form class="box box-danger" method="post" enctype="multipart/form-data" asp-area="Admin" asp-controller="Post" asp-action="Add">
         <div class="box-body">
+            <!-- نمایش خطاهای ولیدیشن -->
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    </ul>
+                </div>
+            }
+
             <!-- فیلد عنوان -->
             <div class="form-group col-md-6">
-                <label for="Title">عنوان</label>
+                <label asp-for="Title">عنوان</label>
                 @Html.EditorFor(m => m.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
             </div>
 
             <!-- فیلد Slug -->
             <div class="form-group col-md-6">
-                <label for="Slug">Slug</label>
+                <label asp-for="Slug">Slug</label>
                 @Html.EditorFor(m => m.Slug, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Slug, "", new { @class = "text-danger" })
             </div>
 
             <!-- فیلد توضیحات -->
             <div class="form-group col-md-12">
+                <label asp-for="Description">توضیحات</label>
                 @Html.EditorFor(m => m.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
             </div>
 
             <!-- فیلد آپلود فایل -->
             <div class="form-group col-md-12">
-                <label for="ImageFile">عکس</label>
+                <label asp-for="ImageFile">عکس</label>
                 <input asp-for="ImageFile" type="file" class="form-control" />
+                @Html.ValidationMessageFor(m => m.ImageFile, "", new { @class = "text-danger" })
             </div>
         </div>
 

@@ -1,19 +1,15 @@
+using CoreLayer.Services.FileManager;
 using CoreLayer.Services.Posts;
 using CoreLayer.Services.Users;
 using DataLayer.Context;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Weblog
 {
@@ -28,28 +24,47 @@ namespace Weblog
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        { 
+        {
+            // Register Razor Pages and MVC with Compatibility Version
             services.AddRazorPages();
             services.AddControllersWithViews();
+
+            // Register application services
             services.AddScoped<IUserService, UserService>();
             services.AddTransient<IPostService, PostService>();
-            services.AddDbContext<BlogContext>(option =>
+            services.AddTransient<IFileManager, FileManager>();
+
+            // Register DbContext
+            services.AddDbContext<BlogContext>(options =>
             {
-                option.UseSqlServer(Configuration.GetConnectionString("Default"));
+                options.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
 
-            services.AddAuthentication(option =>
+            // Configure Authentication with Cookies
+            services.AddAuthentication(options =>
             {
-                option.DefaultAuthenticateScheme=CookieAuthenticationDefaults.AuthenticationScheme;
-                option.DefaultChallengeScheme=CookieAuthenticationDefaults.AuthenticationScheme;
-                option.DefaultSignInScheme=CookieAuthenticationDefaults.AuthenticationScheme;
-            }).AddCookie(option =>
+                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            })
+            .AddCookie(options =>
             {
-                option.LoginPath = "/Auth/Login";
-
-                option.ExpireTimeSpan = TimeSpan.FromDays(30);
+                options.LoginPath = "/Auth/Login";
+                options.ExpireTimeSpan = TimeSpan.FromDays(30);
+                options.SlidingExpiration = true; // Enable sliding expiration
+                options.AccessDeniedPath = "/Auth/AccessDenied"; // Optional: Custom access denied page
             });
-            
+
+            // Register CORS (optional, if needed for API or cross-origin requests)
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,24 +77,37 @@ namespace Weblog
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            // Apply CORS globally (optional, if needed)
+            app.UseCors("AllowAll");
+
             app.UseRouting();
 
+            // Authentication & Authorization Middleware
             app.UseAuthentication();
             app.UseAuthorization();
 
+            // Endpoint Routing
             app.UseEndpoints(endpoints =>
             {
+                // Default route for areas
                 endpoints.MapControllerRoute(
-                    name: "Default",
-                    pattern:"{area:exists}/{controller=Home}/{action=Index}/{id?}"
-                   );
+                    name: "areas",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+
+                // Default route for controllers
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}"
+                );
+
+                // Razor Pages routing
                 endpoints.MapRazorPages();
             });
         }
