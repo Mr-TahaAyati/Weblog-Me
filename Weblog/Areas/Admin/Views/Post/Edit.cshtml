@@ -1,0 +1,75 @@
+﻿@using Weblog.Areas.Admin.Models.Posts
+@model EditPostViewModel
+@{
+    ViewData["title"] = "ویرایش پست";
+}
+<section class="content-header" style="margin-bottom: 20px;">
+    <h1>
+        @ViewData["Title"]
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <a asp-area="Admin" asp-controller="Home" asp-action="Index">
+                <i class="fa fa-dashboard"></i> خانه
+            </a>
+        </li>
+        <li>
+            <a asp-area="Admin" asp-controller="Post" asp-action="Index">
+                <i class="fa fa-dashboard"></i> پست‌ها
+            </a>
+        </li>
+        <li class="active">@ViewData["Title"]</li>
+    </ol>
+</section>
+
+<section class="content">
+    <form class="box box-danger" method="post" enctype="multipart/form-data" asp-area="Admin" asp-controller="Post" asp-action="Edit">
+        <div class="box-body">
+            <!-- نمایش خطاهای ولیدیشن -->
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            <!-- فیلد عنوان -->
+            <div class="form-group col-md-6">
+                <label asp-for="Title">عنوان</label>
+                @Html.EditorFor(m => m.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- فیلد Slug -->
+            <div class="form-group col-md-6">
+                <label asp-for="Slug">Slug</label>
+                @Html.EditorFor(m => m.Slug, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Slug, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- فیلد توضیحات -->
+            <div class="form-group col-md-12">
+                <label asp-for="Description">توضیحات</label>
+                @Html.EditorFor(m => m.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- فیلد آپلود فایل -->
+            <div class="form-group col-md-12">
+                <label asp-for="ImageFile">عکس</label>
+                <input asp-for="ImageFile" type="file" class="form-control" />
+                @Html.ValidationMessageFor(m => m.ImageFile, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!-- دکمه ثبت -->
+        <div class="box-footer">
+            <button class="btn btn-success" type="submit">ثبت اطلاعات</button>
+        </div>
+    </form>
+</section>

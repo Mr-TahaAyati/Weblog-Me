@@ -13,10 +13,9 @@ namespace CoreLayer.Services.Posts
     {
         OperationResult CreatePost(CreatePostDto command);
         OperationResult EditPost(EditPostDto command);
-        PostDto GetPostById(int postId); // اصلاح نام متد
+        PostDto GetPostById(int postId);
         bool IsSlugExist(string slug);
-
-        IEnumerable<PostDto> GetAllPosts(); // متد برای دریافت تمام پست‌ها
+        IEnumerable<PostDto> GetAllPosts();
     }
 
     public class PostService : IPostService
@@ -32,18 +31,20 @@ namespace CoreLayer.Services.Posts
 
         public IEnumerable<PostDto> GetAllPosts()
         {
-            return _context.Posts
-                .Select(post => new PostDto
-                {
-                    PostId = post.PostId,
-                    Title = post.Title,
-                    Slug = post.Slug,
-                    ImageName = post.ImageName
-                }).ToList(); // به صورت یک لیست از PostDto باز می‌گرداند
+            return _context.Posts.Select(post => new PostDto
+            {
+                PostId = post.Id,
+                Title = post.Title,
+                Slug = post.Slug,
+                ImageName = post.ImageName
+            }).ToList();
         }
 
         public OperationResult CreatePost(CreatePostDto command)
         {
+            if (string.IsNullOrWhiteSpace(command.Title))
+                return OperationResult.Error("عنوان نمی‌تواند خالی باشد.");
+
             if (command.ImageFile == null)
                 return OperationResult.Error("تصویر باید انتخاب شود.");
 
@@ -51,18 +52,13 @@ namespace CoreLayer.Services.Posts
 
             try
             {
-                // ذخیره فایل
-                post.ImageName = _fileManager.SaveFile(command.ImageFile, Directories.PostImage);
-
-                // افزودن به دیتابیس
+                post.ImageName = _fileManager.SaveFileAndReturnName(command.ImageFile, Directories.PostImage);
                 _context.Posts.Add(post);
                 _context.SaveChanges();
-
                 return OperationResult.Success();
             }
             catch (Exception ex)
             {
-                // در صورت بروز خطا
                 return OperationResult.Error($"خطا در ذخیره‌سازی: {ex.Message}");
             }
         }
@@ -70,7 +66,7 @@ namespace CoreLayer.Services.Posts
         public OperationResult EditPost(EditPostDto command)
         {
             var post = _context.Posts.FirstOrDefault(c => c.Id == command.PostId);
-
+            var oldImage = post.ImageName;
             if (post == null)
                 return OperationResult.NotFound("پست مورد نظر یافت نشد.");
 
@@ -78,10 +74,17 @@ namespace CoreLayer.Services.Posts
             {
                 post = PostMapper.MapEditDtoToPost(command, post);
 
+                if (command.ImageFile != null)
+                {
+                    post.ImageName = _fileManager.SaveFileAndReturnName(command.ImageFile, Directories.PostImage);
+                }
+
                 _context.Posts.Update(post);
                 _context.SaveChanges();
+                if (command.ImageFile != null)
+                    _fileManager.DeleteFile(oldImage, Directories.PostImage);
 
-                return OperationResult.Success();
+                    return OperationResult.Success();
             }
             catch (Exception ex)
             {
@@ -89,7 +92,7 @@ namespace CoreLayer.Services.Posts
             }
         }
 
-        public PostDto GetPostById(int postId) // اصلاح نام متد
+        public PostDto GetPostById(int postId)
         {
             var post = _context.Posts.FirstOrDefault(c => c.Id == postId);
             return post == null ? null : PostMapper.MapToDto(post);

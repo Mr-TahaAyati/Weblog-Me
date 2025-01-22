@@ -58,5 +58,50 @@ namespace Weblog.Areas.Admin.Controllers
             // در صورت موفقیت، هدایت به صفحه Index
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult Edit(int id)
+        {
+            var post=_postService.GetPostById(id);
+            if (post == null)
+                return RedirectToAction("Index");
+
+            var model = new EditPostViewModel()
+            {
+                Description = post.Description,
+                Slug = post.Slug,
+                Title = post.Title
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id,EditPostViewModel createViewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                // بازگشت به صفحه Add با داده‌های ارسال‌شده توسط کاربر
+                return View(createViewModel);
+            }
+
+            var result = _postService.EditPost(new EditPostDto()
+            {
+                Description = createViewModel.Description,
+                ImageFile = createViewModel.ImageFile,
+                Slug = createViewModel.Slug,
+                Title = createViewModel.Title,
+                PostId = id
+            });
+
+            if (result.Status != OperationResultStatus.Success)
+            {
+                // افزودن پیام خطا به ModelState
+                ModelState.AddModelError("", "خطا در ثبت اطلاعات. لطفاً دوباره تلاش کنید.");
+                return View(createViewModel); // بازگشت به صفحه Add
+            }
+
+            // در صورت موفقیت، هدایت به صفحه Index
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

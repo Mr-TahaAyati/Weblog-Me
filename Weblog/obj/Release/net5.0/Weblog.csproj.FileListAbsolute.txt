@@ -12,7 +12,6 @@ C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Weblog.TagHe
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Weblog.RazorCoreGenerate.cache
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Home\_ViewImports.cshtml.g.cs
-C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Post\Index.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Shared\_Header.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Shared\_SideBar.cshtml.g.cs
@@ -99,6 +98,8 @@ C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\ref\Weblog.d
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\bin\Release\net5.0\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\bin\Release\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\bin\Release\net5.0\System.IO.Pipelines.dll
-C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Post\Add.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Shared\EditorTemplates\Ckeditor4.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Shared\EditorTemplates\IFormFile.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Post\Add.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Post\Edit.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Post\Index.cshtml.g.cs
