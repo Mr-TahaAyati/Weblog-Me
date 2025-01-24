@@ -2,6 +2,8 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    var siteUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}";
+    var postUrl = $"{siteUrl}";
 }
 
 <!--Home Section Start-->
@@ -58,8 +60,8 @@
                     </p>
                     <!--About Social Icons-->
                     <div class="social-icons">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/@postUrl"><i class="fa fa-facebook"></i></a>
+                        <a href="https://x.com/?lang=en/@postUrl"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-dribbble"></i></a>
                         <a href="#"><i class="fa fa-google-plus"></i></a>
                         <a href="#"><i class="fa fa-pinterest"></i></a>

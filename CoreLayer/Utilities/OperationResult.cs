@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoreLayer.Utilities
 {
@@ -11,66 +7,53 @@ namespace CoreLayer.Utilities
         public string Message { get; set; }
         public OperationResultStatus Status { get; set; }
 
+        // ساخت یک متد عمومی برای ایجاد نتیجه
+        private static OperationResult CreateResult(OperationResultStatus status, string message)
+        {
+            return new OperationResult
+            {
+                Status = status,
+                Message = message
+            };
+        }
+
         #region Errors
         public static OperationResult Error()
         {
-            return new OperationResult()
-            {
-                Status = OperationResultStatus.Error,
-                Message = "عملیات ناموفق",
-            };
+            return CreateResult(OperationResultStatus.Error, "عملیات ناموفق");
         }
+
         public static OperationResult Error(string message)
         {
-            return new OperationResult()
-            {
-                Status = OperationResultStatus.Error,
-                Message = message,
-            };
+            return CreateResult(OperationResultStatus.Error, message);
         }
         #endregion
 
         #region NotFound
+        public static OperationResult NotFound()
+        {
+            return CreateResult(OperationResultStatus.NotFound, "اطلاعات درخواستی یافت نشد");
+        }
 
         public static OperationResult NotFound(string message)
         {
-            return new OperationResult()
-            {
-                Status = OperationResultStatus.NotFound,
-                Message = message,
-            };
+            return CreateResult(OperationResultStatus.NotFound, message);
         }
-        public static OperationResult NotFound()
-        {
-            return new OperationResult()
-            {
-                Status = OperationResultStatus.NotFound,
-                Message = "اطلاعات درخواستی یافت نشد",
-            };
-        }
-
         #endregion
 
-        #region Succsess
-
+        #region Success
         public static OperationResult Success()
         {
-            return new OperationResult()
-            {
-                Status = OperationResultStatus.Success,
-                Message = "عملیات با موفقیت انجام شد",
-            };
+            return CreateResult(OperationResultStatus.Success, "عملیات با موفقیت انجام شد");
         }
+
         public static OperationResult Success(string message)
         {
-            return new OperationResult()
-            {
-                Status = OperationResultStatus.Success,
-                Message = message,
-            };
+            return CreateResult(OperationResultStatus.Success, message);
         }
         #endregion
     }
+
     public enum OperationResultStatus
     {
         Error = 10,

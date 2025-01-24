@@ -50736,12 +50736,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\posts\2fed62f2-611a-497e-801a-1cada980ad9e.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\posts\760a7c59-7ed8-4ac7-bbea-f3d359bb4f3d.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\posts\4f8718e6-0a1b-49e4-bb2f-21cc9e19310c.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Weblog</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Weblog</BasePath>
-      <RelativePath>images\posts\760a7c59-7ed8-4ac7-bbea-f3d359bb4f3d.jpg</RelativePath>
+      <RelativePath>images\posts\4f8718e6-0a1b-49e4-bb2f-21cc9e19310c.jpg</RelativePath>
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
@@ -50750,7 +50750,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\posts\760a7c59-7ed8-4ac7-bbea-f3d359bb4f3d.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\posts\4f8718e6-0a1b-49e4-bb2f-21cc9e19310c.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\posts\781b41d1-1947-47a1-a9da-d55dba036b55.jpg))">
       <SourceType>Package</SourceType>
@@ -50767,6 +50767,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\posts\781b41d1-1947-47a1-a9da-d55dba036b55.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\posts\ab0f5d9f-060b-47f8-b14d-f5ca44171cff.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Weblog</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Weblog</BasePath>
+      <RelativePath>images\posts\ab0f5d9f-060b-47f8-b14d-f5ca44171cff.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\posts\ab0f5d9f-060b-47f8-b14d-f5ca44171cff.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\testimonial\img-1.jpg))">
       <SourceType>Package</SourceType>

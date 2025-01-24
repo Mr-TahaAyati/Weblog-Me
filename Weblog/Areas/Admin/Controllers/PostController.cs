@@ -19,8 +19,8 @@ namespace Weblog.Areas.Admin.Controllers
         // نمایش لیست پست‌ها
         public IActionResult Index()
         {
-            var posts = _postService.GetAllPosts(); // دریافت همه پست‌ها
-            return View(posts); // ارسال داده‌ها به ویو Index
+            var posts = _postService.GetAllPosts();
+            return View(posts);
         }
 
         // صفحه ساخت پست جدید
@@ -35,7 +35,13 @@ namespace Weblog.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                // بازگشت به صفحه Add با داده‌های ارسال‌شده توسط کاربر
+                return View(createViewModel);
+            }
+
+            // بررسی تکراری بودن Slug
+            if (_postService.IsSlugExist(createViewModel.Slug))
+            {
+                ModelState.AddModelError(nameof(CreatePostViewModel.Slug), "Slug وارد شده قبلاً ثبت شده است.");
                 return View(createViewModel);
             }
 
@@ -50,18 +56,17 @@ namespace Weblog.Areas.Admin.Controllers
 
             if (result.Status != OperationResultStatus.Success)
             {
-                // افزودن پیام خطا به ModelState
-                ModelState.AddModelError("", "خطا در ثبت اطلاعات. لطفاً دوباره تلاش کنید.");
-                return View(createViewModel); // بازگشت به صفحه Add
+                ModelState.AddModelError(nameof(CreatePostViewModel.Slug), result.Message);
+                return View(createViewModel);
             }
 
-            // در صورت موفقیت، هدایت به صفحه Index
             return RedirectToAction(nameof(Index));
         }
 
+        // صفحه ویرایش پست
         public IActionResult Edit(int id)
         {
-            var post=_postService.GetPostById(id);
+            var post = _postService.GetPostById(id);
             if (post == null)
                 return RedirectToAction("Index");
 
@@ -76,31 +81,35 @@ namespace Weblog.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id,EditPostViewModel createViewModel)
+        public IActionResult Edit(int id, EditPostViewModel editViewModel)
         {
             if (!ModelState.IsValid)
             {
-                // بازگشت به صفحه Add با داده‌های ارسال‌شده توسط کاربر
-                return View(createViewModel);
+                return View(editViewModel);
+            }
+
+            // بررسی تکراری بودن Slug
+            if (_postService.IsSlugExist(editViewModel.Slug))
+            {
+                ModelState.AddModelError(nameof(EditPostViewModel.Slug), "Slug وارد شده قبلاً ثبت شده است.");
+                return View(editViewModel);
             }
 
             var result = _postService.EditPost(new EditPostDto()
             {
-                Description = createViewModel.Description,
-                ImageFile = createViewModel.ImageFile,
-                Slug = createViewModel.Slug,
-                Title = createViewModel.Title,
+                Description = editViewModel.Description,
+                ImageFile = editViewModel.ImageFile,
+                Slug = editViewModel.Slug,
+                Title = editViewModel.Title,
                 PostId = id
             });
 
             if (result.Status != OperationResultStatus.Success)
             {
-                // افزودن پیام خطا به ModelState
-                ModelState.AddModelError("", "خطا در ثبت اطلاعات. لطفاً دوباره تلاش کنید.");
-                return View(createViewModel); // بازگشت به صفحه Add
+                ModelState.AddModelError(nameof(EditPostViewModel.Slug), result.Message);
+                return View(editViewModel);
             }
 
-            // در صورت موفقیت، هدایت به صفحه Index
             return RedirectToAction(nameof(Index));
         }
     }

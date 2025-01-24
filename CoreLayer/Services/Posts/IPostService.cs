@@ -88,7 +88,7 @@ namespace CoreLayer.Services.Posts
             }
             catch (Exception ex)
             {
-                return OperationResult.Error($"خطا در ویرایش پست: {ex.Message}");
+                return OperationResult.Error($"خطا در ویرایش پست: {ex.Message}");  
             }
         }
 
