@@ -2,6 +2,7 @@
 using CoreLayer.Services.Posts;
 using CoreLayer.Utilities;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using Weblog.Areas.Admin.Models.Posts;
 
 namespace Weblog.Areas.Admin.Controllers
@@ -16,10 +17,18 @@ namespace Weblog.Areas.Admin.Controllers
             _postService = postService;
         }
 
-        // نمایش لیست پست‌ها
-        public IActionResult Index()
+        // نمایش لیست پست‌ها با فیلتر
+        public IActionResult Index(string title)
         {
             var posts = _postService.GetAllPosts();
+
+            // فیلتر پست‌ها بر اساس عنوان
+            if (!string.IsNullOrEmpty(title))
+            {
+                posts = posts.Where(p => p.Title.Contains(title)).ToList();
+            }
+
+            ViewBag.TitleFilter = title;  // ارسال مقدار فیلتر به ویو
             return View(posts);
         }
 
