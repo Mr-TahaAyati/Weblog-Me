@@ -1,0 +1,53 @@
+﻿@page "{slug}"
+@using CoreLayer.Utilities
+@model Weblog.Pages.PostModel
+
+@{
+    ViewData["Title"] = Model.Post?.Title ?? "بدون عنوان";
+}
+<section class="blogs pt-100 pb-100 bg-gray" data-scroll-index="4">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <div class="heading text-center">
+                    <h6>وبلاگ</h6>
+                    <h2>@(Model.Post?.Title ?? "بدون عنوان")</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            @if (Model.Post != null)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="@Directories.GetPostImage(Model.Post.ImageName)" alt="@Model.Post.Title">
+                        </div>
+                        <div class="blog-content text-center">
+                            <h3>@Model.Post.Title</h3>
+                            <p>@Html.Raw(Model.Post.Description)</p> <!-- حل مشکل Encoding -->
+                            <div class="blog-meta">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="col text-center">
+                    <p>پست مورد نظر یافت نشد</p>
+                </div>
+            }
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <div class="blog-button pt-40">
+                    <a class="main-btn" asp-page="Blog">مشاهده بیشتر</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

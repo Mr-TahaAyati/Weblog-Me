@@ -3,6 +3,8 @@ using CoreLayer.Mappers;
 using CoreLayer.Services.FileManager;
 using CoreLayer.Utilities;
 using DataLayer.Context;
+using DataLayer.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,8 @@ namespace CoreLayer.Services.Posts
         OperationResult CreatePost(CreatePostDto command);
         OperationResult EditPost(EditPostDto command);
         PostDto GetPostById(int postId);
-        bool IsSlugExist(string slug);
+		PostDto GetPostBySlug(string slug);
+		bool IsSlugExist(string slug);
         IEnumerable<PostDto> GetAllPosts();
     }
 
@@ -95,12 +98,23 @@ namespace CoreLayer.Services.Posts
         public PostDto GetPostById(int postId)
         {
             var post = _context.Posts.FirstOrDefault(c => c.Id == postId);
-            return post == null ? null : PostMapper.MapToDto(post);
+            return PostMapper.MapToDto(post);
         }
 
         public bool IsSlugExist(string slug)
         {
             return _context.Posts.Any(p => p.Slug == slug);
         }
-    }
+
+		public PostDto GetPostBySlug(string slug)
+		{
+			var post = _context.Posts
+                .Include(c => c.User)
+            .FirstOrDefault(c => c.Slug == slug);
+			if (post == null)
+				return null;
+
+			return PostMapper.MapToDto(post);
+		}
+	}
 }

@@ -103,3 +103,4 @@ C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Post\Add.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Post\Edit.cshtml.g.cs
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Post\Index.cshtml.g.cs
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Pages\Post.cshtml.g.cs
