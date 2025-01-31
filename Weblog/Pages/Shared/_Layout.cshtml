@@ -1,8 +1,6 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html dir="rtl" lang="en">
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,62 +8,46 @@
     <meta name="description" content="Kalvin Portfolio Template">
     <meta name="author" content="cosmos-themes">
 
-    <title>رزومه من</title>
+    <title>@ViewData["Title"] - رزومه من</title>
 
     <!-- favicon -->
     <link href="/images/favicon.ico" rel="icon" type="image/png">
 
-    <!--Font Awesome css-->
+    <!-- CSS Files -->
     <link rel="stylesheet" href="/css/font-awesome.min.css">
-
-    <!--Bootstrap css-->
     <link rel="stylesheet" href="/css/bootstrap.css">
-
-    <!--Owl Carousel css-->
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-
-    <!--Magnific Popup css-->
     <link rel="stylesheet" href="/css/magnific-popup.css">
-
-    <!--Site Main Style css-->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <partial name="_Nav" />
+    @* هدر را فقط اگر HideHeader مقدار true نداشته باشد نمایش بده *@
+    @if (!(ViewData["HideHeader"]?.Equals(true) ?? false))
+    {
+        <partial name="_Nav" />
+    }
+
     <!--Preloader-->
     <div class="preloader">
-        <div class="loader "></div>
+        <div class="loader"></div>
     </div>
     <!--Preloader-->
-    <!--Navbar Start-->
-
-    <!--Navbar End-->
-   @RenderBody()
-    <!--Contact Section End-->
-    <!--Footer Start-->
+    @RenderBody() <!-- اینجا محتوای صفحات لود می‌شود -->
+    <!-- Footer -->
     <partial name="_Footer" />
-    <!--Footer End-->
-    <!--Jquery js-->
+
+    <!-- JS Files -->
     <script src="/js/jquery.min.js"></script>
-    <!--Bootstrap js-->
     <script src="/js/bootstrap.min.js"></script>
-    <!--Stellar js-->
     <script src="/js/jquery.stellar.js"></script>
-    <!--Animated Headline js-->
     <script src="/js/animated.headline.js"></script>
-    <!--Owl Carousel js-->
     <script src="/js/owl.carousel.min.js"></script>
-    <!--ScrollIt js-->
     <script src="/js/scrollIt.min.js"></script>
-    <!--Isotope js-->
-    <script src="js/isotope.pkgd.min.js"></script>
-    <!--Magnific Popup js-->
+    <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/jquery.magnific-popup.min.js"></script>
-    <!--Site Main js-->
     <script src="/js/main.js"></script>
 
 </body>
 </html>
-

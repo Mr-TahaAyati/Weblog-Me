@@ -3,8 +3,10 @@
 @model Weblog.Pages.PostModel
 
 @{
+    ViewData["HideHeader"] = true; // تعیین اینکه هدر در این صفحه نمایش داده نشود
     ViewData["Title"] = Model.Post?.Title ?? "بدون عنوان";
 }
+
 <section class="blogs pt-100 pb-100 bg-gray" data-scroll-index="4">
     <div class="container">
         <div class="row">
@@ -27,9 +29,6 @@
                         <div class="blog-content text-center">
                             <h3>@Model.Post.Title</h3>
                             <p>@Html.Raw(Model.Post.Description)</p> <!-- حل مشکل Encoding -->
-                            <div class="blog-meta">
-                               
-                            </div>
                         </div>
                     </div>
                 </div>
