@@ -1,0 +1,263 @@
+﻿/* عمومی */
+body {
+    font-family: 'Tahoma', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* نوار ناوبری */
+.navbar {
+    background-color: #343a40;
+    padding: 15px 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+    .navbar-nav .nav-item .nav-link.active {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        background-color: #0056b3;
+        color: #fff;
+    }
+
+/* بنر وبلاگ */
+.banner-blog {
+    background-image: url('/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.banner-caption h1 {
+    font-size: 36px;
+    font-weight: 700;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.bread-crumb a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+    .bread-crumb a:hover {
+        color: #007bff;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* جزئیات وبلاگ */
+.blog-detail {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.blog-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-heading h2 {
+    font-size: 32px;
+    margin-top: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.blog-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* بخش نظرات */
+.comments-section {
+    margin-top: 50px;
+}
+
+.comment-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.post-comment {
+    list-style: none;
+    padding: 0;
+}
+
+    .post-comment li {
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .post-comment li:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+    .post-comment .comment-author-img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+    }
+
+    .post-comment .comment-info {
+        flex: 1;
+    }
+
+        .post-comment .comment-info h3 {
+            font-size: 18px;
+            margin: 0;
+            color: #333;
+        }
+
+        .post-comment .comment-info span {
+            display: block;
+            font-size: 14px;
+            color: #888;
+            margin: 5px 0;
+        }
+
+        .post-comment .comment-info p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .post-comment .comment-info a {
+            font-size: 14px;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+            .post-comment .comment-info a:hover {
+                color: #0056b3;
+            }
+
+/* فرم ارسال نظر */
+.comment-form-container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+    .comment-form-container h3 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+    .contact-form textarea:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+.contact-form .main-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .contact-form .main-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .blog-heading h2 {
+        font-size: 28px;
+    }
+
+    .post-comment li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .post-comment .comment-author-img {
+        margin-right: 0;
+        margin-bottom: 15px; /* فاصله بیشتر برای موبایل */
+    }
+
+    .contact-form textarea {
+        height: 120px;
+        font-size: 14px; /* اندازه متن در موبایل */
+    }
+
+    .comment-form-container {
+        padding: 20px; /* فاصله کمتر در موبایل */
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .banner-caption h1 {
+        font-size: 30px;
+    }
+
+    .blog-heading h2 {
+        font-size: 28px;
+    }
+}

@@ -1,4 +1,4 @@
-
+﻿
 /*==================================
         Table of Content
         1. Body and Core Css
@@ -1481,54 +1481,49 @@ section.banner-blog .banner-caption h1 {
 }
 
 .blog-detail ul.post-comment {
-    float: left;
-}
-
-.blog-detail ul.post-comment li {
-    width: 100%;
-    float: left;
-    border-bottom: 1px solid #efefef;
-    padding: 15px 0;
+    padding: 0;
     list-style: none;
 }
 
+.blog-detail ul.post-comment li {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #efefef;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
 .blog-detail ul.post-comment li img {
-    width: 15%;
-    float: left;
+    width: 50px;  /* اندازه کوچک آواتار */
+    height: 50px;
+    border-radius: 50%; /* دایره‌ای شدن آواتار */
+    margin-right: 15px; /* فاصله از متن */
+    object-fit: cover; /* تناسب تصویر */
 }
 
 .blog-detail ul.post-comment li .comment-info {
-    float: left;
-    width: 85%;
-    padding-left: 15px;
-    margin-top: 10px;
+    flex-grow: 1;
 }
 
 .blog-detail ul.post-comment li .comment-info h3 {
-    float: left;
     font-size: 16px;
     font-weight: 700;
-    margin-bottom: 0;
-}
-
-.blog-detail ul.post-comment li .comment-info a {
-    float: right;
-    font-size: 13px;
-    font-weight: 800;
+    margin: 0;
     color: #222;
 }
 
 .blog-detail ul.post-comment li .comment-info span {
-    float: left;
-    width: 100%;
     font-size: 13px;
+    color: #aaa;
+    display: block;
+    margin-top: 5px;
 }
 
 .blog-detail ul.post-comment li .comment-info p {
     font-size: 14px;
-    line-height: 1.2;
-    float: left;
-    margin-top: 6px;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #444;
 }
 
 .blog-detail .contact-form {
@@ -1557,6 +1552,9 @@ section.banner-blog .banner-caption h1 {
     margin-bottom: 15px;
     height: 150px;
 }
+
+}
+
 
 
 /*============ 15. Mobile Responsive  ============*/
@@ -1615,3 +1613,130 @@ section.banner-blog .banner-caption h1 {
  .owl-carousel{
     direction: ltr !important;
    }
+<style >
+/* استایل عمومی نظرات */
+.comments-section {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.post-comment {
+    list-style: none;
+    padding: 0;
+}
+
+    .post-comment li {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+        .post-comment li:hover {
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+    .post-comment .comment-author-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .post-comment .comment-info {
+        margin-left: 20px;
+        flex: 1;
+    }
+
+        .post-comment .comment-info h3 {
+            font-size: 18px;
+            margin: 0;
+            color: #333;
+        }
+
+        .post-comment .comment-info span {
+            display: block;
+            color: #888;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .post-comment .comment-info p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .post-comment .comment-info a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+            .post-comment .comment-info a:hover {
+                color: #0056b3;
+            }
+
+    /* پاسخ‌ها */
+    .post-comment li .reply-comment {
+        margin-left: 40px;
+        border-left: 3px solid #007bff;
+        padding-left: 20px;
+        margin-top: 20px;
+        font-style: italic;
+        background-color: #f7f7f7;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+/* فرم ارسال نظر */
+.comment-form-container {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+    .comment-form-container:hover {
+        box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+.contact-form textarea {
+    resize: none;
+    border-radius: 12px;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+    .contact-form textarea:focus {
+        border-color: #007bff;
+    }
+
+.main-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .main-btn:hover {
+        background-color: #0056b3;
+    }
+
+</style >

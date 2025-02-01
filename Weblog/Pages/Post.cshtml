@@ -3,50 +3,127 @@
 @model Weblog.Pages.PostModel
 
 @{
-    ViewData["HideHeader"] = true; // تعیین اینکه هدر در این صفحه نمایش داده نشود
+    ViewData["HideHeader"] = true; // هدر نمایش داده نشود
     ViewData["Title"] = Model.Post?.Title ?? "بدون عنوان";
 }
 
-<section class="blogs pt-100 pb-100 bg-gray" data-scroll-index="4">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <div class="heading text-center">
-                    <h6>وبلاگ</h6>
-                    <h2>@(Model.Post?.Title ?? "بدون عنوان")</h2>
-                </div>
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Personal, Portfolio, Creative">
+    <meta name="description" content="Kalvin Portfolio Template">
+    <meta name="author" content="cosmos-themes">
+
+    <title>@(Model.Post?.Title ?? "بدون عنوان")</title>
+
+    <!-- favicon -->
+    <link href="/images/favicon.ico" rel="icon" type="image/png">
+
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <!--Site Main Style css (اصلاح شده برای پوشه css)-->
+    <link rel="stylesheet" href="/post/style2.css">  <!-- اصلاح لینک CSS -->
+    <!-- Custom CSS if needed -->
+    <link rel="stylesheet" href="/css/custom.css"> <!-- اگر CSS های اضافی دارید، اینجا اضافه کنید -->
+
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="blogs-page.html" class="nav-link active">برگشت</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <section class="banner-blog">
+        <div id="particles-js"></div>
+        <div class="banner-caption text-center">
+            <h1>@(Model.Post?.Title ?? "بدون عنوان")</h1>
+            <div class="bread-crumb mt-10">
+                <a href="index.html">خانه</a>
+                <a href="blogs-page.html">وبلاگ</a>
+                <a href="#">صفحه</a>
             </div>
         </div>
+    </section>
 
-        <div class="row justify-content-center">
-            @if (Model.Post != null)
-            {
-                <div class="col-md-6 col-lg-4">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="@Directories.GetPostImage(Model.Post.ImageName)" alt="@Model.Post.Title">
-                        </div>
-                        <div class="blog-content text-center">
-                            <h3>@Model.Post.Title</h3>
-                            <p>@Html.Raw(Model.Post.Description)</p> <!-- حل مشکل Encoding -->
-                        </div>
+    <section class="blog-detail pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <!-- Blog Content -->
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="blog-image text-center">
+                        <img src="@Directories.GetPostImage(Model.Post.ImageName)" alt="@Model.Post.Title" class="img-fluid rounded">
+                    </div>
+                    <div class="blog-heading text-center">
+                        <h2>@Model.Post?.Title</h2>
+                    </div>
+                    <div class="blog-content">
+                        <p>@Html.Raw(Model.Post?.Description ?? "توضیحات موجود نیست")</p>
+                    </div>
+
+                    <!-- نظرات -->
+                    <div class="comments-section">
+                        <h3 class="comment-title">نظرات</h3>
+                        <ul class="post-comment">
+                            @foreach (var comment in Model.Comments)
+                            {
+                                <li>
+                                    <img src="/images/comment-authors/img-2.jpg" alt="" class="comment-author-img">
+                                    <div class="comment-info">
+                                        <h3>@comment.UserFullName</h3>
+                                        <a href="#">پاسخ</a>
+                                        <span>@comment.CreationDate.ToShortDateString()</span>
+                                        <p>@comment.Text</p>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+                    <!-- فرم ارسال نظر -->
+                    <div class="comment-form-container">
+                        <h3 class="comment-title">نظر شما</h3>
+                        <form class="contact-form" method="post">
+                            <input type="hidden" asp-for="PostId" value="@Model.Post.PostId" />
+                            <div class="form-group">
+                                <textarea asp-for="Text" rows="5" class="form-control" placeholder="نظر شما"></textarea>
+                                <span asp-validation-for="Text" class="text-danger"></span>
+                            </div>
+                            <div class="text-center pt-3">
+                                <input class="main-btn" type="submit" value="ارسال نظر">
+                            </div>
+                        </form>
                     </div>
                 </div>
-            }
-            else
-            {
-                <div class="col text-center">
-                    <p>پست مورد نظر یافت نشد</p>
-                </div>
-            }
-        </div>
-
-        <div class="row">
-            <div class="col text-center">
-                <div class="blog-button pt-40">
-                    <a class="main-btn" asp-page="Blog">مشاهده بیشتر</a>
-                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- jQuery js -->
+    <script src="/js/jquery.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Particles js -->
+    <script src="/js/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'js/particles.json', function () {
+            console.log('particles loaded');
+        });
+    </script>
+</body>
+</html>
