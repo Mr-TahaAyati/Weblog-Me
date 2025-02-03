@@ -45,6 +45,7 @@
                     <tr>
                         <th>#</th>
                         <th>عکس</th>
+                        <th>پست ویژه</th>
                         <th>عنوان</th>
                         <th>Slug</th>
                         <th>عملیات</th>
@@ -60,6 +61,17 @@
                                 <td>@index</td>
                                 <td>
                                     <img style="max-width:150px" src="@Directories.GetPostImage(post.ImageName)" />
+                                </td>
+                                <td>
+                                    @if (post.IsSpecial)
+                                    {
+                                        <i class="fa fa-check text-success"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-close text-danger"></i>
+                                    }
+
                                 </td>
                                 <td>@post.Title</td>
                                 <td>@post.Slug</td>

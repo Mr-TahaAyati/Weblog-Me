@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 
 namespace Weblog.Areas.Admin.Models.Posts
 {
@@ -25,6 +26,9 @@ namespace Weblog.Areas.Admin.Models.Posts
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [DataType(DataType.Upload)]
         public IFormFile ImageFile { get; set; }
+
+
+        public bool IsSpecial { get; set; }
     }
 
 
@@ -50,5 +54,7 @@ namespace Weblog.Areas.Admin.Models.Posts
         [Display(Name = "عکس")]
         [DataType(DataType.Upload)]
         public IFormFile ImageFile { get; set; }
+        [Display(Name = "؟پست ویژه")]
+        public bool IsSpecial { get; set; } = false;
     }
 }

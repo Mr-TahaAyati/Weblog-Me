@@ -19,7 +19,8 @@ namespace CoreLayer.Mappers
                 Slug = dto.Slug,
                 Title = dto.Title,
                 UserId = dto.UserId,
-                IsDelete = false
+                IsDelete = false,
+                IsSpecial = dto.IsSpecial
             };
         }
         public static PostDto MapToDto(Post post)
@@ -32,7 +33,8 @@ namespace CoreLayer.Mappers
                 UserId = post.UserId,
                 CreationDate=post.CreationDate,
                 ImageName = post.ImageName,
-                PostId=post.Id
+                PostId=post.Id,
+               IsSpecial = post.IsSpecial
             };
         }
 
@@ -41,6 +43,7 @@ namespace CoreLayer.Mappers
             post.Description = editDto.Description;
             post.Title = editDto.Title;
             post.Slug = editDto.Slug;
+            post.IsSpecial = editDto.IsSpecial;
             return post;
         }
     }

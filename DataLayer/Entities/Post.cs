@@ -19,6 +19,7 @@ namespace DataLayer.Entities
         public string Title { get; set; }
         [Required]
         public string Slug { get; set; }
+        public bool IsSpecial { get; set; }
         #region Relations
         public bool IsDelete { get; set; }
 

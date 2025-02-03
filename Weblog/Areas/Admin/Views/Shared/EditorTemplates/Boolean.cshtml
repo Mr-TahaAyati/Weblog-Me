@@ -1,0 +1,8 @@
+﻿@model bool
+<div>
+	<div class="custom-control custom-checkbox">
+		<input type="checkbox" class="custom-control-input" />
+		<label class="custom-control-label" asp-for="@Model"></label>
+	</div>
+	<span asp-validation-for="@Model" class="text-danger"></span>
+</div>

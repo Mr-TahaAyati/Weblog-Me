@@ -15,5 +15,6 @@ namespace CoreLayer.DTOs.Posts
         public string Slug { get; set; }
         public DateTime CreationDate { get; set; }
         public string ImageName { get; set; }
+        public bool IsSpecial { get; set; }
     }
 }

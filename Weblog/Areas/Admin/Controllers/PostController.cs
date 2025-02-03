@@ -60,6 +60,7 @@ namespace Weblog.Areas.Admin.Controllers
                 ImageFile = createViewModel.ImageFile,
                 Slug = createViewModel.Slug,
                 Title = createViewModel.Title,
+                IsSpecial = createViewModel.IsSpecial,
                 UserId = User.GetUserId()
             });
 
@@ -83,7 +84,9 @@ namespace Weblog.Areas.Admin.Controllers
             {
                 Description = post.Description,
                 Slug = post.Slug,
-                Title = post.Title
+                Title = post.Title,
+                IsSpecial = post.IsSpecial 
+                
             };
             return View(model);
         }
@@ -110,7 +113,8 @@ namespace Weblog.Areas.Admin.Controllers
                 ImageFile = editViewModel.ImageFile,
                 Slug = editViewModel.Slug,
                 Title = editViewModel.Title,
-                PostId = id
+                PostId = id,
+                IsSpecial = editViewModel.IsSpecial
             });
 
             if (result.Status != OperationResultStatus.Success)

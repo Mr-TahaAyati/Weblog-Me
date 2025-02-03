@@ -16,8 +16,8 @@ namespace CoreLayer.Services.Posts
         OperationResult CreatePost(CreatePostDto command);
         OperationResult EditPost(EditPostDto command);
         PostDto GetPostById(int postId);
-		PostDto GetPostBySlug(string slug);
-		bool IsSlugExist(string slug);
+        PostDto GetPostBySlug(string slug);
+        bool IsSlugExist(string slug);
         IEnumerable<PostDto> GetAllPosts();
     }
 
@@ -39,7 +39,8 @@ namespace CoreLayer.Services.Posts
                 PostId = post.Id,
                 Title = post.Title,
                 Slug = post.Slug,
-                ImageName = post.ImageName
+                ImageName = post.ImageName,
+                IsSpecial = post.IsSpecial // ✅ مقداردهی `IsSpecial`
             }).ToList();
         }
 
@@ -52,6 +53,7 @@ namespace CoreLayer.Services.Posts
                 return OperationResult.Error("تصویر باید انتخاب شود.");
 
             var post = PostMapper.MapCreateDtoToPost(command);
+            post.IsSpecial = command.IsSpecial; // ✅ مقداردهی `IsSpecial`
 
             try
             {
@@ -69,36 +71,46 @@ namespace CoreLayer.Services.Posts
         public OperationResult EditPost(EditPostDto command)
         {
             var post = _context.Posts.FirstOrDefault(c => c.Id == command.PostId);
-            var oldImage = post.ImageName;
             if (post == null)
                 return OperationResult.NotFound("پست مورد نظر یافت نشد.");
 
+            var oldImage = post.ImageName;
+
             try
             {
-                post = PostMapper.MapEditDtoToPost(command, post);
+                post.Title = command.Title;
+                post.Description = command.Description;
+                post.Slug = command.Slug;
+                post.IsSpecial = command.IsSpecial; // ✅ مقداردهی `IsSpecial`
 
                 if (command.ImageFile != null)
                 {
                     post.ImageName = _fileManager.SaveFileAndReturnName(command.ImageFile, Directories.PostImage);
+                    _fileManager.DeleteFile(oldImage, Directories.PostImage);
                 }
 
                 _context.Posts.Update(post);
                 _context.SaveChanges();
-                if (command.ImageFile != null)
-                    _fileManager.DeleteFile(oldImage, Directories.PostImage);
 
-                    return OperationResult.Success();
+                return OperationResult.Success();
             }
             catch (Exception ex)
             {
-                return OperationResult.Error($"خطا در ویرایش پست: {ex.Message}");  
+                return OperationResult.Error($"خطا در ویرایش پست: {ex.Message}");
             }
         }
 
         public PostDto GetPostById(int postId)
         {
             var post = _context.Posts.FirstOrDefault(c => c.Id == postId);
-            return PostMapper.MapToDto(post);
+            return post != null ? new PostDto
+            {
+                PostId = post.Id,
+                Title = post.Title,
+                Slug = post.Slug,
+                ImageName = post.ImageName,
+                IsSpecial = post.IsSpecial // ✅ مقداردهی `IsSpecial`
+            } : null;
         }
 
         public bool IsSlugExist(string slug)
@@ -106,15 +118,17 @@ namespace CoreLayer.Services.Posts
             return _context.Posts.Any(p => p.Slug == slug);
         }
 
-		public PostDto GetPostBySlug(string slug)
-		{
-			var post = _context.Posts
-                .Include(c => c.User)
-            .FirstOrDefault(c => c.Slug == slug);
-			if (post == null)
-				return null;
-
-			return PostMapper.MapToDto(post);
-		}
-	}
+        public PostDto GetPostBySlug(string slug)
+        {
+            var post = _context.Posts.Include(c => c.User).FirstOrDefault(c => c.Slug == slug);
+            return post != null ? new PostDto
+            {
+                PostId = post.Id,
+                Title = post.Title,
+                Slug = post.Slug,
+                ImageName = post.ImageName,
+                IsSpecial = post.IsSpecial // ✅ مقداردهی `IsSpecial`
+            } : null;
+        }
+    }
 }

@@ -104,3 +104,4 @@ C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\refint\Weblo
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Weblog.pdb
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Weblog.genruntimeconfig.cache
 C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\ref\Weblog.dll
+C:\Users\Soleimani\source\repos\Weblog-Me\Weblog\obj\Release\net5.0\Razor\Areas\Admin\Views\Shared\EditorTemplates\Boolean.cshtml.g.cs
