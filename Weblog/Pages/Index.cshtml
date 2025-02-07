@@ -1,4 +1,5 @@
 ﻿@page
+@using CoreLayer.Utilities
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -36,44 +37,46 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-6">
-                <!--About Image-->
+                <!-- تصویر درباره من یا پست ویژه -->
                 <div class="about-img">
-                    <img src="images/about-img.jpg" alt="">
+                    <img src="@(Model.SpecialPost != null ? Directories.GetPostImage(Model.SpecialPost.ImageName) : "images/about-img.jpg")"
+                         alt="@(Model.SpecialPost != null ? Model.SpecialPost.Title : "تصویر درباره من")">
                 </div>
             </div>
             <div class="col-lg-7 col-md-6">
-                <!--About Content-->
+                <!-- محتوای درباره من -->
                 <div class="about-content">
                     <div class="about-heading">
-                        <h2>درباره من</h2>
-                        <span>برنامه نویس Asp.Net Core</span>
+                        <h2>@(Model.SpecialPost != null ? Model.SpecialPost.Title : "پست ویژه‌ای موجود نیست")</h2>
                     </div>
-                    <p>
-                        من یک برنامه‌نویس با تجربه در زمینه توسعه وب و نرم‌افزار با زبان‌های ASP و C# هستم و طی یک سال فعالیت حرفه‌ای، توانسته‌ام مهارت‌های خود را در این حوزه به سطح بالایی ارتقاء دهم. در این مدت، به طراحی و پیاده‌سازی برنامه‌های تحت وب و وب‌سرویس‌ها با استفاده از ASP.NET پرداخته‌ام و توانسته‌ام به حل مسائل پیچیده و چالش‌های فنی بپردازم.
 
-                        مهارت‌های من شامل تسلط کامل بر زبان C#، توانایی توسعه و نگهداری کدهای مقیاس‌پذیر و کارآمد، همچنین به‌کارگیری تکنیک‌های شی‌گرایی و الگوهای طراحی برای تولید کدهایی منظم و بهینه است. در کنار این موارد، آشنایی با مفاهیم پایگاه‌داده و SQL و توانایی بهینه‌سازی کوئری‌ها و تعامل با سیستم‌های پایگاه‌داده، از دیگر توانایی‌های من است.
+                    @if (Model.SpecialPost != null)
+                    {
+                        <p>@Html.Raw(Model.SpecialPost.Description)</p> <!-- نمایش توضیحات پست ویژه -->
+                    }
 
-                        من به توسعه نرم‌افزارهایی با تجربه کاربری عالی و رابط‌های کاربری کاربرپسند نیز اهتمام دارم و همواره سعی می‌کنم تا با استفاده از بهترین شیوه‌ها و تکنیک‌ها، محصولاتی با کیفیت و عملکرد بالا ارائه دهم. در طول یک سال گذشته، با همکاری تیم‌های مختلف، تجربه فراوانی در زمینه پروژه‌های تیمی، کنترل نسخه و مدیریت پروژه‌های نرم‌افزاری به دست آورده‌ام.
-
-                        از دیگر ویژگی‌های من می‌توان به روحیه یادگیری مستمر، تعهد به بهبود فرآیندهای کاری و توانایی سازگاری با تکنولوژی‌های جدید اشاره کرد. با پشتکار و انگیزه‌ای بالا، همواره در تلاش برای بهبود مهارت‌های خود و ارائه راه‌حل‌های نوآورانه در پروژه‌های مختلف هستم.
-
-                    </p>
-                    <!--About Social Icons-->
+                    <!-- آیکون‌های شبکه‌های اجتماعی -->
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/@postUrl"><i class="fa fa-facebook"></i></a>
-                        <a href="https://x.com/?lang=en/@postUrl"><i class="fa fa-twitter"></i></a>
+                        @if (Model.SpecialPost?.Slug != null)
+                        {
+                            <a href="https://www.facebook.com/@Model.SpecialPost.Slug"><i class="fa fa-facebook"></i></a>
+                            <a href="https://x.com/@Model.SpecialPost.Slug"><i class="fa fa-twitter"></i></a>
+                        }
                         <a href="#"><i class="fa fa-dribbble"></i></a>
                         <a href="#"><i class="fa fa-google-plus"></i></a>
                         <a href="#"><i class="fa fa-pinterest"></i></a>
                     </div>
+
+                    <!-- دکمه دانلود رزومه -->
                     <span class="about-button">
-                        <a class="main-btn" href="/images/Taha.jpg">دانلود رزومه</a>
+                        <a class="main-btn" href="/images/Taha.jpg" download>دانلود رزومه</a>
                     </span>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!--About Section End-->
 <!--Services Section Start-->
 <section class="services bg-gray pt-100 pb-50" data-scroll-index="2">

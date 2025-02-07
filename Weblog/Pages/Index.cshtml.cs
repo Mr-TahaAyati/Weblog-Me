@@ -1,11 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using CoreLayer.DTOs.Posts;
+using CoreLayer.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Weblog.Pages
 {
@@ -13,15 +11,20 @@ namespace Weblog.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        private readonly IMainPageService _mainPageService;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public PostDto SpecialPost { get; set; }
+
+        public IndexModel(ILogger<IndexModel> logger, IMainPageService mainPageService)
         {
             _logger = logger;
+            _mainPageService = mainPageService;
         }
 
         public void OnGet()
         {
-
+            var mainPageData = _mainPageService.GetData();
+            SpecialPost = mainPageData.SpecialPosts.FirstOrDefault(); // نمایش اولین پست ویژه
         }
     }
 }

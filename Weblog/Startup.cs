@@ -1,3 +1,4 @@
+using CoreLayer.Services;
 using CoreLayer.Services.Comments;
 using CoreLayer.Services.FileManager;
 using CoreLayer.Services.Posts;
@@ -35,6 +36,8 @@ namespace Weblog
             services.AddTransient<IPostService, PostService>();
             services.AddTransient<IFileManager, FileManager>();
             services.AddTransient<ICommentService, CommentService>();
+            services.AddScoped<IMainPageService, MainPageService>();
+
 
             // Register DbContext
             services.AddDbContext<BlogContext>(options =>
