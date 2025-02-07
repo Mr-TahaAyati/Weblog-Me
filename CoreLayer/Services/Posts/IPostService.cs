@@ -40,7 +40,7 @@ namespace CoreLayer.Services.Posts
                 Title = post.Title,
                 Slug = post.Slug,
                 ImageName = post.ImageName,
-                IsSpecial = post.IsSpecial // ✅ مقداردهی `IsSpecial`
+                IsSpecial = post.IsSpecial
             }).ToList();
         }
 
@@ -53,7 +53,7 @@ namespace CoreLayer.Services.Posts
                 return OperationResult.Error("تصویر باید انتخاب شود.");
 
             var post = PostMapper.MapCreateDtoToPost(command);
-            post.IsSpecial = command.IsSpecial; // ✅ مقداردهی `IsSpecial`
+            post.IsSpecial = command.IsSpecial;
 
             try
             {
@@ -81,7 +81,7 @@ namespace CoreLayer.Services.Posts
                 post.Title = command.Title;
                 post.Description = command.Description;
                 post.Slug = command.Slug;
-                post.IsSpecial = command.IsSpecial; // ✅ مقداردهی `IsSpecial`
+                post.IsSpecial = command.IsSpecial;
 
                 if (command.ImageFile != null)
                 {
@@ -108,8 +108,9 @@ namespace CoreLayer.Services.Posts
                 PostId = post.Id,
                 Title = post.Title,
                 Slug = post.Slug,
+                Description = string.IsNullOrWhiteSpace(post.Description) ? "توضیحی برای این پست ثبت نشده است." : post.Description,
                 ImageName = post.ImageName,
-                IsSpecial = post.IsSpecial // ✅ مقداردهی `IsSpecial`
+                IsSpecial = post.IsSpecial
             } : null;
         }
 
@@ -126,8 +127,9 @@ namespace CoreLayer.Services.Posts
                 PostId = post.Id,
                 Title = post.Title,
                 Slug = post.Slug,
+                Description = string.IsNullOrWhiteSpace(post.Description) ? "توضیحی برای این پست ثبت نشده است." : post.Description,
                 ImageName = post.ImageName,
-                IsSpecial = post.IsSpecial // ✅ مقداردهی `IsSpecial`
+                IsSpecial = post.IsSpecial
             } : null;
         }
     }

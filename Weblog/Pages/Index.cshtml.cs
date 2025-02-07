@@ -3,6 +3,7 @@ using CoreLayer.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Weblog.Pages
@@ -14,6 +15,7 @@ namespace Weblog.Pages
         private readonly IMainPageService _mainPageService;
 
         public PostDto SpecialPost { get; set; }
+        public List<PostDto> LatestPosts { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger, IMainPageService mainPageService)
         {
@@ -24,7 +26,8 @@ namespace Weblog.Pages
         public void OnGet()
         {
             var mainPageData = _mainPageService.GetData();
-            SpecialPost = mainPageData.SpecialPosts.FirstOrDefault(); // نمایش اولین پست ویژه
+            SpecialPost = mainPageData.SpecialPosts.FirstOrDefault();
+            LatestPosts = mainPageData.LatestPosts ?? new List<PostDto>();
         }
     }
 }

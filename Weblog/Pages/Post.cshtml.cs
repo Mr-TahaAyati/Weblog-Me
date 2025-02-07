@@ -38,6 +38,12 @@ namespace Weblog.Pages
             if (Post == null)
                 return NotFound();
 
+            // بررسی مقدار Description و اطمینان از مقداردهی مناسب
+            if (string.IsNullOrWhiteSpace(Post.Description))
+            {
+                Post.Description = "توضیحی برای این پست ثبت نشده است.";
+            }
+
             Comments = _commentService.GetPostComments(Post.PostId);
             return Page();
         }

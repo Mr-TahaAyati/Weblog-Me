@@ -1180,73 +1180,111 @@ section.portfolio .portfolio-items .item .item-content:hover .item-overlay .icon
 
 /*============ 9. Blogs Section ============*/
 
+/* تنظیم ابعاد تصاویر برای هماهنگی */
+.blogs .blog-item .blog-img img {
+    width: 100%;
+    height: 200px; /* ارتفاع ثابت برای یکدستی */
+    object-fit: cover; /* جلوگیری از تغییر نسبت تصویر */
+}
+
+/* محدود کردن متن توضیحات به 3 خط */
+.truncate-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* نمایش فقط ۳ خط */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    min-height: 4.5em; /* ارتفاع حداقل برای جلوگیری از بهم‌ریختگی */
+}
+
+/* تنظیم ارتفاع کارت‌ها برای یکدستی */
+.blogs .blog-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 350px; /* جلوگیری از تغییر اندازه کارت‌ها */
+    box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.1);
+}
+
+    /* تنظیم محتوای کارت‌ها */
+    .blogs .blog-item .blog-content {
+        flex-grow: 1;
+        padding: 30px 15px 15px;
+        background: #fff;
+    }
+
+        /* استایل عنوان بلاگ */
+        .blogs .blog-item .blog-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        /* استایل توضیحات */
+        .blogs .blog-item .blog-content p {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f7f7f7;
+            margin-bottom: 0;
+        }
+
+        /* استایل متا (دکمه‌ها و اطلاعات) */
+        .blogs .blog-item .blog-content .blog-meta {
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .blogs .blog-item .blog-content .blog-meta span {
+                font-size: 13px;
+                color: #748182;
+            }
+
+            .blogs .blog-item .blog-content .blog-meta .more {
+                color: #222;
+                border-bottom: 1px solid #aaa;
+                font-weight: 600;
+            }
+
+    /* تنظیم افکت برای تصاویر هنگام هاور */
+    .blogs .blog-item .blog-img {
+        position: relative;
+        overflow: hidden;
+    }
+
+        .blogs .blog-item .blog-img img {
+            display: block;
+            transition: all 0.5s;
+        }
+
+            .blogs .blog-item .blog-img img:hover {
+                transform: scale(1.1);
+            }
+
+/* استایل دکمه "مشاهده بیشتر" */
+.blog-button .main-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+    .blog-button .main-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* تنظیمات کاروسل */
 .blogs .owl-carousel .owl-stage-outer {
     padding: 15px 0;
 }
 
 .blogs .blog-item {
-    -webkit-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.1);
-}
-
-.blogs .blog-item .blog-img {
-    position: relative;
-    overflow: hidden;
-}
-
-.blogs .blog-item .blog-img img {
-    display: block;
-    width: 100%;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-}
-
-.blogs .blog-item .blog-img img:hover {
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    transform: scale(1.15);
-}
-
-.blogs .blog-item .blog-content {
-    padding: 30px 15px 15px;
-    background: #fff;
-}
-
-.blogs .blog-item .blog-content h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 15px;
-}
-
-.blogs .blog-item .blog-content p {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f7f7f7;
-    margin-bottom: 0;
-}
-
-.blogs .blog-item .blog-content .blog-meta {
-    padding-top: 15px;
-}
-
-.blogs .blog-item .blog-content .blog-meta span {
-    font-size: 13px;
-    color: #748182;
-}
-
-.blogs .blog-item .blog-content .blog-meta .more {
-    color: #222;
-    border-bottom: 1px solid #aaa;
-    font-weight: 600;
-}
-
-.blogs .blog-item .blog-content .blog-meta .date {
-    float: left;
-}
-
-.blog-list .blog-item {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 
