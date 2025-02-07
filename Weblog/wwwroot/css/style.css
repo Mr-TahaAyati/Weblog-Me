@@ -1180,112 +1180,149 @@ section.portfolio .portfolio-items .item .item-content:hover .item-overlay .icon
 
 /*============ 9. Blogs Section ============*/
 
-/* تنظیم ابعاد تصاویر برای هماهنگی */
-.blogs .blog-item .blog-img img {
-    width: 100%;
-    height: 200px; /* ارتفاع ثابت برای یکدستی */
-    object-fit: cover; /* جلوگیری از تغییر نسبت تصویر */
+/* تنظیم ساختار کارت‌های بلاگ */
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* چینش خودکار کارت‌ها */
+    gap: 20px; /* فاصله بین کارت‌ها */
 }
 
-/* محدود کردن متن توضیحات به 3 خط */
+    /* تنظیمات کلی برای کارت‌ها */
+    .blogs .blog-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 380px; /* جلوگیری از کوتاه شدن کارت */
+        max-height: 450px; /* محدود کردن بیش از حد کشیده شدن */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden; /* جلوگیری از بیرون زدن محتوا */
+    }
+
+        /* تنظیم ابعاد تصاویر برای جلوگیری از کشیدگی */
+        .blogs .blog-item .blog-img img {
+            width: 100%;
+            height: 220px; /* کمی بیشتر برای نمایش بهتر */
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* تنظیم متن بلاگ برای جلوگیری از بهم‌ریختگی */
+        .blogs .blog-item .blog-content {
+            flex-grow: 1;
+            padding: 20px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+/* محدود کردن متن توضیحات به ۳ خط */
 .truncate-text {
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* نمایش فقط ۳ خط */
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
-    min-height: 4.5em; /* ارتفاع حداقل برای جلوگیری از بهم‌ریختگی */
+    min-height: 4.5em;
 }
 
-/* تنظیم ارتفاع کارت‌ها برای یکدستی */
-.blogs .blog-item {
+/* تنظیم عنوان بلاگ */
+.blogs .blog-item .blog-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* تنظیم متا (دکمه‌ها و اطلاعات) */
+.blogs .blog-item .blog-content .blog-meta {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    min-height: 350px; /* جلوگیری از تغییر اندازه کارت‌ها */
-    box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #748182;
 }
 
-    /* تنظیم محتوای کارت‌ها */
-    .blogs .blog-item .blog-content {
-        flex-grow: 1;
-        padding: 30px 15px 15px;
-        background: #fff;
+/* افکت هاور برای تصاویر */
+.blogs .blog-item .blog-img {
+    position: relative;
+    overflow: hidden;
+}
+
+    .blogs .blog-item .blog-img img {
+        display: block;
+        transition: all 0.5s ease-in-out;
     }
 
-        /* استایل عنوان بلاگ */
-        .blogs .blog-item .blog-content h3 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #222;
-            margin-bottom: 15px;
+        .blogs .blog-item .blog-img img:hover {
+            transform: scale(1.08);
         }
 
-        /* استایل توضیحات */
-        .blogs .blog-item .blog-content p {
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f7f7f7;
-            margin-bottom: 0;
-        }
-
-        /* استایل متا (دکمه‌ها و اطلاعات) */
-        .blogs .blog-item .blog-content .blog-meta {
-            padding-top: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-            .blogs .blog-item .blog-content .blog-meta span {
-                font-size: 13px;
-                color: #748182;
-            }
-
-            .blogs .blog-item .blog-content .blog-meta .more {
-                color: #222;
-                border-bottom: 1px solid #aaa;
-                font-weight: 600;
-            }
-
-    /* تنظیم افکت برای تصاویر هنگام هاور */
-    .blogs .blog-item .blog-img {
-        position: relative;
-        overflow: hidden;
-    }
-
-        .blogs .blog-item .blog-img img {
-            display: block;
-            transition: all 0.5s;
-        }
-
-            .blogs .blog-item .blog-img img:hover {
-                transform: scale(1.1);
-            }
-
-/* استایل دکمه "مشاهده بیشتر" */
+/* استایل دکمه مشاهده بیشتر */
 .blog-button .main-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding: 12px 24px;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    border-radius: 5px;
-    transition: all 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 6px;
     display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
     .blog-button .main-btn:hover {
-        background-color: #0056b3;
+        background-color: #222;
+        border-color: white;
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     }
 
-/* تنظیمات کاروسل */
-.blogs .owl-carousel .owl-stage-outer {
-    padding: 15px 0;
+    .blog-button .main-btn:active {
+        background-color: #444;
+        transform: scale(1);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    }
+
+/* تنظیمات ریسپانسیو */
+@media (max-width: 768px) {
+    .blogs {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+        .blogs .blog-item {
+            min-height: 350px;
+            max-height: 420px;
+        }
+
+            .blogs .blog-item .blog-img img {
+                height: 180px;
+            }
 }
 
-.blogs .blog-item {
-    margin-bottom: 20px;
+@media (max-width: 480px) {
+    .blogs {
+        grid-template-columns: 1fr;
+    }
+
+        .blogs .blog-item {
+            min-height: 320px;
+            max-height: auto;
+        }
+
+            .blogs .blog-item .blog-img img {
+                height: 160px;
+            }
 }
+
 
 
 /*============ 10. Testimonial Section ============*/
@@ -1763,18 +1800,27 @@ section.banner-blog .banner-caption h1 {
     }
 
 .main-btn {
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.8); /* مشکی پررنگ‌تر برای خوانایی بهتر */
     color: white;
-    border: none;
+    border: 2px solid white; /* مرز سفید برای تضاد بهتر */
     padding: 12px 30px;
     font-size: 16px;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
     .main-btn:hover {
-        background-color: #0056b3;
+        background-color: #222; /* مشکی کمی روشن‌تر هنگام هاور */
+        color: #fff;
+        border-color: #fff;
+        transform: scale(1.05); /* بزرگ‌تر شدن هنگام هاور */
     }
+
+    .main-btn:active {
+        background-color: #444; /* هنگام کلیک، مشکی روشن‌تر */
+        transform: scale(1); /* برگشت به اندازه اصلی */
+    }
+
 
 </style >
