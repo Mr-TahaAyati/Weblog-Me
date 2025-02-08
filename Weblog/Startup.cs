@@ -30,7 +30,6 @@ namespace Weblog
             // Register Razor Pages and MVC with Compatibility Version
             services.AddRazorPages();
             services.AddControllersWithViews();
-
             // Register application services
             services.AddScoped<IUserService, UserService>();
             services.AddTransient<IPostService, PostService>();
@@ -38,11 +37,17 @@ namespace Weblog
             services.AddTransient<ICommentService, CommentService>();
             services.AddScoped<IMainPageService, MainPageService>();
 
-
             // Register DbContext
             services.AddDbContext<BlogContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("Default"));
+            });
+            services.AddAuthorization(option =>
+            {
+                option.AddPolicy("AdminPolicy", builder =>
+                {
+                    builder.RequireRole("Admin");
+                });
             });
 
             // Configure Authentication with Cookies
@@ -52,14 +57,14 @@ namespace Weblog
                 options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             })
-            .AddCookie(options =>
+            .AddCookie(option =>
             {
-                options.LoginPath = "/Auth/Login";
-                options.ExpireTimeSpan = TimeSpan.FromDays(30);
-                options.SlidingExpiration = true; // Enable sliding expiration
-                options.AccessDeniedPath = "/Auth/AccessDenied"; // Optional: Custom access denied page
+                option.LoginPath = "/Auth/Login";
+                option.ExpireTimeSpan = TimeSpan.FromDays(30);
+                option.SlidingExpiration = true; // Enable sliding expiration
+                option.AccessDeniedPath = "/Index"; // Optional: Custom access denied page
             });
-
+           
             // Register CORS (optional, if needed for API or cross-origin requests)
             services.AddCors(options =>
             {

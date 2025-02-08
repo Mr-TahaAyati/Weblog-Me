@@ -1,6 +1,7 @@
 ﻿using CoreLayer.DTOs.Posts;
 using CoreLayer.Services.Posts;
 using CoreLayer.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using Weblog.Areas.Admin.Models.Posts;
@@ -8,7 +9,7 @@ using Weblog.Areas.Admin.Models.Posts;
 namespace Weblog.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class PostController : Controller
+    public class PostController : AdminControllerBase
     {
         private readonly IPostService _postService;
 
