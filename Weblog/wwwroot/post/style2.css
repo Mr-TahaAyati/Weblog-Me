@@ -1,35 +1,36 @@
-﻿/* عمومی */
+﻿/* تنظیمات کلی */
 body {
     font-family: 'Tahoma', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
+/* لینک‌ها */
 a {
     text-decoration: none;
-    color: inherit;
+    color: #007bff;
+    transition: color 0.3s ease;
 }
 
-h1, h2, h3 {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-}
+    a:hover {
+        color: #0056b3;
+    }
 
-/* نوار ناوبری (هدر) */
+/* هدر */
 .navbar {
-    background: #fff; /* تغییر رنگ به سفید */
+    background: #fff;
     padding: 15px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: #333; /* تغییر رنگ متن به مشکی */
+    color: #333;
     font-size: 16px;
     padding: 10px 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
 }
 
@@ -37,7 +38,7 @@ h1, h2, h3 {
         content: "";
         width: 0;
         height: 3px;
-        background: #007bff; /* خط زیرین لینک‌ها */
+        background: #007bff;
         position: absolute;
         left: 50%;
         bottom: -5px;
@@ -49,13 +50,7 @@ h1, h2, h3 {
         width: 100%;
     }
 
-    .navbar-nav .nav-item .nav-link.active {
-        background-color: #f8f9fa; /* رنگ پس‌زمینه لینک فعال */
-        color: #333;
-        border-radius: 5px;
-    }
-
-/* بنر وبلاگ */
+/* بنر */
 .banner-blog {
     background-image: url('/images/banner.jpg');
     background-size: cover;
@@ -67,35 +62,28 @@ h1, h2, h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* عنوان بنر */
 .banner-caption h1 {
     font-size: 36px;
     font-weight: 700;
-    animation: fadeIn 2s ease-in-out;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.bread-crumb a {
-    color: #fff;
-    margin-right: 10px;
-    font-size: 14px;
-}
-
-    .bread-crumb a:hover {
-        color: #ffcc00;
-    }
-
-/* جداکننده بین متن و نظرات */
+/* جداکننده */
 .separator {
     width: 80%;
     margin: 50px auto;
     border-top: 2px solid #ddd;
-    opacity: 0.7;
 }
 
-/* جزئیات وبلاگ */
+/* محتوای پست */
 .blog-detail {
-    padding: 100px 0;
+    padding: 80px 0;
     background-color: #fff;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .blog-image img {
@@ -107,17 +95,10 @@ h1, h2, h3 {
 .blog-heading h2 {
     font-size: 32px;
     margin-top: 20px;
-    color: #333;
     text-align: center;
 }
 
-.blog-content p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* بخش نظرات */
+/* نظرات */
 .comments-section {
     margin-top: 50px;
 }
@@ -128,6 +109,7 @@ h1, h2, h3 {
     color: #333;
 }
 
+/* لیست نظرات */
 .post-comment {
     list-style: none;
     padding: 0;
@@ -148,44 +130,34 @@ h1, h2, h3 {
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
         }
 
-    .post-comment .comment-author-img {
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        margin-right: 20px;
+.comment-author-img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+/* اطلاعات نظر */
+.comment-info {
+    flex: 1;
+}
+
+    .comment-info h3 {
+        font-size: 18px;
+        margin: 0;
     }
 
-    .post-comment .comment-info {
-        flex: 1;
+    .comment-info span {
+        display: block;
+        font-size: 14px;
+        color: #888;
+        margin: 5px 0;
     }
 
-        .post-comment .comment-info h3 {
-            font-size: 18px;
-            margin: 0;
-            color: #333;
-        }
-
-        .post-comment .comment-info span {
-            display: block;
-            font-size: 14px;
-            color: #888;
-            margin: 5px 0;
-        }
-
-        .post-comment .comment-info p {
-            color: #555;
-            font-size: 16px;
-        }
-
-        .post-comment .comment-info a {
-            font-size: 14px;
-            color: #007bff;
-            transition: color 0.3s ease;
-        }
-
-            .post-comment .comment-info a:hover {
-                color: #0056b3;
-            }
+    .comment-info p {
+        color: #555;
+        font-size: 16px;
+    }
 
 /* فرم ارسال نظر */
 .comment-form-container {
@@ -194,16 +166,6 @@ h1, h2, h3 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
-}
-
-    .comment-form-container h3 {
-        font-size: 24px;
-        color: #333;
-        margin-bottom: 20px;
-    }
-
-.contact-form .form-group {
-    margin-bottom: 20px;
 }
 
 .contact-form textarea {
@@ -222,7 +184,8 @@ h1, h2, h3 {
         outline: none;
     }
 
-.contact-form .main-btn {
+/* دکمه ارسال */
+.main-btn {
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
@@ -233,12 +196,20 @@ h1, h2, h3 {
     transition: background-color 0.3s ease;
 }
 
-    .contact-form .main-btn:hover {
+    .main-btn:hover {
         background-color: #0056b3;
     }
 
-/* Media Queries */
+/* ریسپانسیو */
 @media (max-width: 768px) {
+    .blog-detail {
+        max-width: 90%;
+    }
+
+    .banner-caption h1 {
+        font-size: 30px;
+    }
+
     .blog-heading h2 {
         font-size: 28px;
     }
@@ -249,30 +220,7 @@ h1, h2, h3 {
         padding: 15px;
     }
 
-    .post-comment .comment-author-img {
-        margin-right: 0;
+    .comment-author-img {
         margin-bottom: 15px;
-    }
-
-    .contact-form textarea {
-        height: 120px;
-        font-size: 14px;
-    }
-
-    .comment-form-container {
-        padding: 20px;
-    }
-
-    .navbar-nav .nav-item .nav-link {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-
-    .banner-caption h1 {
-        font-size: 30px;
-    }
-
-    .blog-heading h2 {
-        font-size: 28px;
     }
 }
