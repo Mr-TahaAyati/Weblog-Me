@@ -6,6 +6,7 @@ namespace CoreLayer.Utilities
     {
         public string Message { get; set; }
         public OperationResultStatus Status { get; set; }
+        public bool IsSuccess { get; set; }
 
         // ساخت یک متد عمومی برای ایجاد نتیجه
         private static OperationResult CreateResult(OperationResultStatus status, string message)

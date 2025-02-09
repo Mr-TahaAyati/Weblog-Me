@@ -23,13 +23,12 @@ namespace Weblog.Areas.Admin.Controllers
         {
             var posts = _postService.GetAllPosts();
 
-            // فیلتر پست‌ها بر اساس عنوان
             if (!string.IsNullOrEmpty(title))
             {
                 posts = posts.Where(p => p.Title.Contains(title)).ToList();
             }
 
-            ViewBag.TitleFilter = title;  // ارسال مقدار فیلتر به ویو
+            ViewBag.TitleFilter = title;
             return View(posts);
         }
 
@@ -48,7 +47,6 @@ namespace Weblog.Areas.Admin.Controllers
                 return View(createViewModel);
             }
 
-            // بررسی تکراری بودن Slug
             if (_postService.IsSlugExist(createViewModel.Slug))
             {
                 ModelState.AddModelError(nameof(CreatePostViewModel.Slug), "Slug وارد شده قبلاً ثبت شده است.");
@@ -65,13 +63,7 @@ namespace Weblog.Areas.Admin.Controllers
                 UserId = User.GetUserId()
             });
 
-            if (result.Status != OperationResultStatus.Success)
-            {
-                ModelState.AddModelError(nameof(CreatePostViewModel.Slug), result.Message);
-                return View(createViewModel);
-            }
-
-            return RedirectToAction(nameof(Index));
+            return RedirectAndShowAlert(result, RedirectToAction(nameof(Index)));
         }
 
         // صفحه ویرایش پست
@@ -86,8 +78,7 @@ namespace Weblog.Areas.Admin.Controllers
                 Description = post.Description,
                 Slug = post.Slug,
                 Title = post.Title,
-                IsSpecial = post.IsSpecial 
-                
+                IsSpecial = post.IsSpecial
             };
             return View(model);
         }
@@ -101,7 +92,6 @@ namespace Weblog.Areas.Admin.Controllers
                 return View(editViewModel);
             }
 
-            // بررسی تکراری بودن Slug
             if (_postService.IsSlugExist(editViewModel.Slug))
             {
                 ModelState.AddModelError(nameof(EditPostViewModel.Slug), "Slug وارد شده قبلاً ثبت شده است.");
@@ -118,13 +108,8 @@ namespace Weblog.Areas.Admin.Controllers
                 IsSpecial = editViewModel.IsSpecial
             });
 
-            if (result.Status != OperationResultStatus.Success)
-            {
-                ModelState.AddModelError(nameof(EditPostViewModel.Slug), result.Message);
-                return View(editViewModel);
-            }
-
-            return RedirectToAction(nameof(Index));
+            return RedirectAndShowAlert(result, RedirectToAction("Index"));
         }
+
     }
 }
