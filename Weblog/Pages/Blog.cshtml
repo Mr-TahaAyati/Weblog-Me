@@ -1,148 +1,38 @@
 ﻿@page
+@using CoreLayer.Utilities
 @model Weblog.Pages.BlogModel
 @{
     Layout = "Shared/_LayoutBlog";
 }
+
 <!--Blog List Section Starts-->
 <section class="blogs blog-list pt-100 pb-50" data-scroll-index="4">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <!--Blogs Item-->
-                <div class="blog-item">
-                    <div class="blog-img">
-                        <a href="single-blog.html">
-                            <img src="images/blog/img-1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="blog-content">
-                        <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                        <div class="blog-meta">
-                            <span class="more">
-                                <a href="single-blog.html">مطالعه بیشتر</a>
-                            </span>
-                            <span class="date">
-                                22 مرداد 1400
-                            </span>
+            @foreach (var post in Model.BlogPosts.Where(p => !p.IsSpecial)) // حذف پست‌های ویژه
+            {
+                <div class="col-lg-4 col-md-6">
+                    <!--Blogs Item-->
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <a asp-controller="Post" asp-action="Details" asp-route-id="@post.PostId">
+                                <img src="@Directories.GetPostImage(post.ImageName)" alt="@post.Title">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <h3>@post.Title</h3>
+                            <div class="truncate-text">
+                                @Html.Raw(post.Description) @* اگر HTML دارد، در غیر این صورت فقط @post.Description *@
+                            </div>
+                            <div class="blog-meta">
+                                <span class="more">
+                                    <a asp-page="/Post" asp-route-slug="@post.Slug">مطالعه بیشتر</a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!--Blogs Item-->
-                <div class="blog-item">
-                    <div class="blog-img">
-                        <a href="single-blog.html">
-                            <img src="images/blog/img-2.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="blog-content">
-                        <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                        <div class="blog-meta">
-                            <span class="more">
-                                <a href="single-blog.html">مطالعه بیشتر</a>
-                            </span>
-                            <span class="date">
-                                22 مرداد 1400
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!--Blogs Item-->
-                <div class="blog-item">
-                    <div class="blog-img">
-                        <a href="single-blog.html">
-                            <img src="images/blog/img-3.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="blog-content">
-                        <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                        <div class="blog-meta">
-                            <span class="more">
-                                <a href="single-blog.html">مطالعه بیشتر</a>
-                            </span>
-                            <span class="date">
-                                22 مرداد 1400
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <!--Blogs Item-->
-                <div class="blog-item">
-                    <div class="blog-img">
-                        <a href="single-blog.html">
-                            <img src="images/blog/img-4.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="blog-content">
-                        <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                        <div class="blog-meta">
-                            <span class="more">
-                                <a href="single-blog.html">مطالعه بیشتر</a>
-                            </span>
-                            <span class="date">
-                                22 مرداد 1400
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!--Blogs Item-->
-                <div class="blog-item">
-                    <div class="blog-img">
-                        <a href="single-blog.html">
-                            <img src="images/blog/img-5.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="blog-content">
-                        <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                        <div class="blog-meta">
-                            <span class="more">
-                                <a href="single-blog.html">مطالعه بیشتر</a>
-                            </span>
-                            <span class="date">
-                                22 مرداد 1400
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!--Blogs Item-->
-                <div class="blog-item">
-                    <div class="blog-img">
-                        <a href="single-blog.html">
-                            <img src="images/blog/img-6.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="blog-content">
-                        <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                        <div class="blog-meta">
-                            <span class="more">
-                                <a href="single-blog.html">مطالعه بیشتر</a>
-                            </span>
-                            <span class="date">
-                                22 مرداد 1400
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>

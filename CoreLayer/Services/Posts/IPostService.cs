@@ -39,6 +39,7 @@ namespace CoreLayer.Services.Posts
                 PostId = post.Id,
                 Title = post.Title,
                 Slug = post.Slug,
+                Description = string.IsNullOrWhiteSpace(post.Description) ? "توضیحی برای این پست ثبت نشده است." : post.Description, // مقداردهی Description
                 ImageName = post.ImageName,
                 IsSpecial = post.IsSpecial
             }).ToList();

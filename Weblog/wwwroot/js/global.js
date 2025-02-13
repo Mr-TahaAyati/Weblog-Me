@@ -313,10 +313,8 @@ function CallBackHandler(data) {
 }
 
 //modalSize:lg,sm,
-function OpenModal(url, name, title, modalSize = "lg", callback = "undefined") {
-    modalSize = modalSize || 'lg';
-    modalSize = 'modal-' + modalSize;
-
+function OpenModal(url, name, title) {
+    var modalSize ='modal-lg';
     var that = this;
     $('#' + name + ' .modal-body').html('');
 
@@ -331,8 +329,8 @@ function OpenModal(url, name, title, modalSize = "lg", callback = "undefined") {
         },
     }).done(function (result) {
         result = JSON.parse(result);
-        if (result.Status === 200) {
-            $('#' + name + ' .modal-body').html(result.Data);
+        if (result) {
+            $('#' + name + ' .modal-body').html(result);
             $('#' + name + ' .modal-title').html(title);
 
             $('#' + name).modal({
@@ -344,33 +342,10 @@ function OpenModal(url, name, title, modalSize = "lg", callback = "undefined") {
             $('#' + name + ' .modal-dialog').removeClass('modal-lg modal-xl modal-sm modal-full');
             $('#' + name + ' .modal-dialog').addClass(modalSize);
 
-            if (typeof callback !== 'undefined' && callback && callback !== 'undefined') {
-                callback(result);
-            }
             const form = $("#" + name + ' form');
             if (form) {
                 $.validator.unobtrusive.parse(form);
-                loadCkeditor5();
-                loadCkeditor4();
-                loadCalender();
             }
-            if (document.getElementById("number_input")) {
-                setInputFilter(document.getElementById("number_input"),
-                    function (value) {
-                        return /^\d*\.?\d*$/.test(value);
-                    });
-            }
-            if (document.getElementById("number_input1")) {
-                setInputFilter(document.getElementById("number_input1"),
-                    function (value) {
-                        return /^\d*\.?\d*$/.test(value);
-                    });
-            }
-        } else if (result.Status === 404)
-            Warning(result.Title, result.Message, result.IsReloadPage);
-        else if (result.Status === 10) {
-            ErrorAlert(result.Title, result.Message, result.IsReloadPage);
-
         }
     });
 
