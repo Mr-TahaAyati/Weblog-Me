@@ -86,10 +86,10 @@ namespace Weblog
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/ErrorHandler/500");
                 app.UseHsts();
             }
-
+            app.UseStatusCodePagesWithReExecute("/ErrorHandler/{0}");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

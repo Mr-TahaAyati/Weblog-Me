@@ -1822,5 +1822,154 @@ section.banner-blog .banner-caption h1 {
         transform: scale(1); /* برگشت به اندازه اصلی */
     }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
-</style >
+.page-404-number {
+    font-size: 120px;
+    font-weight: 700;
+    color: #d9534f;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #444;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.widget-search-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.widget-search-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #d9534f;
+    font-size: 20px;
+}
+
+    .widget-search-button:hover {
+        color: #b52b27;
+    }
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .page-404-number {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.page-404-number {
+    font-size: 120px;
+    font-weight: 700;
+    color: #0275d8;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #444;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.widget-search-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.widget-search-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0275d8;
+    font-size: 20px;
+}
+
+    .widget-search-button:hover {
+        color: #025aa5;
+    }
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .page-404-number {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+</style>
